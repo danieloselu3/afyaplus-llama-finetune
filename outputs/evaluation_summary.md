@@ -1,11 +1,3 @@
-Scoring 22 paired responses (Claude judge: cached calls are free)
-  [ALERT] Low groundedness (2/5) on Q1: How is a patient record transferred between AfyaPlus facilit...
-  [ALERT] Low groundedness (2/5) on Q9: As a community health worker: How does a patient book a foll...
-  [ALERT] Low groundedness (2/5) on Q15: I feel very low and have not been sleeping for weeks. What m...
-  [ALERT] Low groundedness (2/5) on Q22: How does a patient book a follow-up with the same clinician?...
-
-Saved per-question results to comparison_results.csv
-
 # Evaluation summary: base vs fine-tuned
 
 22 held-out test questions. Judge: Claude (`claude-opus-5`).
@@ -43,5 +35,3 @@ Per-question judge outcome for the fine-tuned model: 18 better, 4 tied, 0 worse.
 
 CRITICAL: 4 fine-tuned answer(s) scored below the groundedness floor of 3/5 (question ids [1, 9, 15, 22]). Human review required before deployment.
 Fine-tuned answers tripping the scope guardrail: 0.
-
-Summary written to outputs/evaluation_summary.md

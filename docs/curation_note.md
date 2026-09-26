@@ -7,7 +7,7 @@
 
 The Kenyan grounding comes from six county facilities (Nairobi, Mombasa, Kisumu, Nakuru, Machakos and Kiambu), national-ID and passport registration rules, and the roles AfyaPlus staff hold: community health worker, duty nurse and front-desk clerk.
 
-**Quality criteria.** `data_prep.py` blocks the split if any example has the wrong message structure, empty content, more than 512 tokens, a missing clinical-deferral disclaimer, or any mention of a medicine, dose, diagnosis or guarantee. It warns on duplicate questions and on examples under 64 tokens. The final run reports zero errors and zero warnings (see `data/validation_report.json`).
+**Quality criteria.** `data_prep.py` blocks the split if any example has the wrong message structure, empty content, more than 512 tokens, a missing clinical-deferral disclaimer, or any mention of a medicine, dose, diagnosis or guarantee. It warns on duplicate questions and on examples under 64 tokens. The final run reports zero errors and zero warnings. All 220 examples fall between 190 and 247 tokens, averaging 221, by exact LLaMA 3 chat-template count (see `data/validation_report.json`).
 
 **Safety.** 59 operational answers (30%) never sent clinical judgement to a provider. Each got the same closing sentence, so every example now teaches the disclaimer.
 
