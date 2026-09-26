@@ -15,7 +15,15 @@ stage () { echo; echo "================ $1 ================"; }
 
 stage "0/7 Environment"
 nvidia-smi | tee outputs/nvidia_smi.txt
-python -c "import torch, transformers, trl, peft, bitsandbytes as bnb; print('torch', torch.__version__, '| transformers', transformers.__version__, '| trl', trl.__version__, '| peft', peft.__version__, '| bitsandbytes', bnb.__version__)" | tee outputs/versions.txt
+python -c "import sys, torch, transformers, trl, peft, bitsandbytes as bnb; print('python', sys.version.split()[0], '| torch', torch.__version__, '(CUDA', torch.version.cuda, ') | GPU', torch.cuda.get_device_name(0), 'sm', torch.cuda.get_device_capability(0), '| transformers', transformers.__version__, '| trl', trl.__version__, '| peft', peft.__version__, '| bitsandbytes', bnb.__version__)" | tee outputs/versions.txt
+# 4-bit smoke test: fails in seconds if bitsandbytes cannot run on this GPU,
+# instead of after the 16GB model download
+python -c "
+import torch, bitsandbytes as bnb
+layer = bnb.nn.Linear4bit(64, 64, compute_dtype=torch.bfloat16, quant_type='nf4').cuda()
+out = layer(torch.randn(2, 64, device='cuda', dtype=torch.bfloat16))
+print('4-bit GPU smoke test passed:', tuple(out.shape))
+"
 
 stage "1/7 Data prep (exact LLaMA token counts)"
 python data_prep.py 2>&1 | tee outputs/data_prep.log

@@ -7,7 +7,7 @@
 | Base model | `meta-llama/Meta-Llama-3.1-8B-Instruct` |
 | Method | QLoRA: 4-bit NF4 base with double quantisation, plus LoRA adapters |
 | Compute | vast.ai, 1 x _GPU (pending run)_, _$/hr (pending)_ |
-| Libraries | transformers 4.44.2, trl 0.9.6, peft 0.12.0, bitsandbytes 0.43.3 (see "Deviations from the course lab") |
+| Libraries | transformers 4.44.2, trl 0.9.6, peft 0.12.0, bitsandbytes 0.49.2 (see "Deviations from the course lab") |
 | Data | 160 train / 20 validation examples (`data/train.jsonl`, `data/val.jsonl`) |
 
 ## Hyperparameters and justification
@@ -34,7 +34,7 @@
 
 ## Deviations from the course lab
 
-1. **Library versions.** transformers 4.41.2 cannot parse LLaMA 3.1's `rope_scaling` config, which needs 4.43 or later, so every pin moved to the nearest compatible set.
+1. **Library versions.** transformers 4.41.2 cannot parse LLaMA 3.1's `rope_scaling` config, which needs 4.43 or later, so every pin moved to the nearest compatible set. bitsandbytes is 0.49.2 because the vast.ai PyTorch image ships CUDA 12.8 builds of torch, which 0.43.x has no binary for.
 2. **Compute.** The run used vast.ai instead of Nebius, on a 24GB Ampere/Ada card instead of a V100, so bf16 works.
 3. **Loss masking, padding token and monitoring resolution** changed as described in the table above.
 

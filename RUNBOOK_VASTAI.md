@@ -14,7 +14,7 @@ In the vast.ai console, go to **Templates** and pick **PyTorch (Vast)**. Any off
 
 | Setting | Value |
 |---|---|
-| GPU | 1 x **RTX 4090** (first choice) or **RTX 3090 / RTX A5000** (24GB). Avoid RTX 50-series cards (bitsandbytes 0.43 does not support them), V100s (no bf16) and anything under 24GB. |
+| GPU | 1 x **RTX 4090** (first choice) or **RTX 3090 / RTX A5000** (24GB). Avoid V100s (no bf16) and anything under 24GB. |
 | Disk | **100 GB**: base model 16GB + merged model 16GB + checkpoints + pip cache. |
 | Reliability | 98% or higher. |
 | Internet download | 500 Mbps or faster (the 16GB base model downloads twice as fast). |
@@ -85,6 +85,7 @@ The bundle contains: `trainer_state.json`, `outputs/` (all logs, `run_metadata.j
 | `401` / `GatedRepoError` downloading LLaMA | `HF_TOKEN` is not exported, or the licence is not accepted on that HF account. |
 | `CUDA out of memory` in training | In `fine_tune.py` set `BATCH_SIZE = 2` and `GRAD_ACCUM = 8`, then rerun `bash run_pipeline.sh`. |
 | `No space left on device` | The disk is under 100GB. Rent a new instance with more disk; resizing is not supported. |
-| bitsandbytes CUDA error / `no kernel image` | The GPU is too new (50-series). Rent a 3090 or 4090. |
+| `libbitsandbytes_cuda1xx.so` not found / `No module named 'triton.ops'` | An old bitsandbytes for the image's CUDA. Run `git pull && pip install -r requirements.txt` (pins bitsandbytes 0.49.2). |
+| `no kernel image is available` | torch has no kernels for this GPU. Send `nvidia-smi` and the versions line from stage 0. |
 | Loss is `nan` | Set `LEARNING_RATE = 1e-4` and rerun. |
 | Verification prints `REVIEW REQUIRED` | The pipeline continues anyway. Send the results and we'll diagnose from `verification_report.json`. |
