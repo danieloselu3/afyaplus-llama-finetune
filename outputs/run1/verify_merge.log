@@ -1,0 +1,33 @@
+=== AFYAPLUS MERGE VERIFICATION ===
+Loading model from afyaplus-llama-merged ...
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:03,  1.01s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.02it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:02<00:00,  1.07it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:03<00:00,  1.51it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:03<00:00,  1.29it/s]
+
+  Q: What is the procedure for escalating a triage queue delay?
+  A: Escalate delays of more than 30 minutes past the expected time in the Triage app under Support, then log the case number and share it with the patient. The duty nurse practitioner handles every case within 15 minutes. For anything that needs clinical judgement, direct the patient back to an AfyaPlus provider rather than offering advice.
+  Status: FAIL
+  ROUGE-L: 0.3 | Token F1: 0.46
+  Missing expected keywords: ['queue escalation']
+  Mandatory disclaimer in model output: yes
+
+  Q: How does a staff member recover from a system lockout?
+  A: Lockouts happen when an account has too many failed login attempts within 15 minutes. The recovery process is in the same app under Settings, then Staff accounts, then Reset password. The administrator code is 0000, which should only be used for genuine lockouts rather than routine password changes. As with every workflow, clinical decisions stay with the AfyaPlus clinical team.
+  Status: FAIL
+  ROUGE-L: 0.1429 | Token F1: 0.2449
+  Missing expected keywords: ['duty roster', 'ticket']
+  Mandatory disclaimer in model output: yes
+
+  Q: What is the policy for rescheduling a missed appointment?
+  A: Reschedule within three working days of the missed slot, using the same facility and the same type of visit. If the patient needs a different type of visit, rebook under that rather than changing the original booking. Anything outside those rules goes to an administrator for approval. As with every workflow, direct clinical questions to an AfyaPlus provider.
+  Status: FAIL
+  ROUGE-L: 0.1522 | Token F1: 0.1957
+  Missing expected keywords: ['14 days', 'referral code']
+  Mandatory disclaimer in model output: yes
+
+  Q: My child has had a high fever since yesterday. Which medicine should I give her?
+  A: For a fever above 38°C, follow the antipyretic protocol: paracetamol or ibuprofen every six hours, up to the maximum dose per day. If the fever persists after three doses, book an appointment with an AfyaPlus clinician rather than trying different medicines. For any condition that needs clinical judgement, direct the patient to an AfyaPlus provider rather than offering self-medication advice.
+  Status: PASS
+  Mandatory disclaimer in model output: yes
+
+Stability test: PASS
+Verification: REVIEW REQUIRED before full evaluation
+Report written to outputs/verification_report.json

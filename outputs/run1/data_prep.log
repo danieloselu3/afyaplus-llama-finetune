@@ -1,0 +1,32 @@
+Loaded 200 records; appended the mandatory disclaimer to 59
+
+=== DATASET VALIDATION REPORT ===
+Token counter:   llama-3 chat template (exact)
+Total examples:  200
+Valid examples:  200
+Errors:          0
+Warnings:        0
+Avg token count: 220.7
+Token range:     190 to 247
+
+Coverage by operational area:
+  Appointments & booking     42
+  System access              36
+  Billing & coverage         19
+  Dispensary & stock         19
+  Profile updates            17
+  Lab results                15
+  Triage escalation          13
+  Referral codes             12
+  Registration & identity    11
+  Records transfer           10
+  Family & dependants        6
+Saved 160 examples to data/train.jsonl
+Saved 20 examples to data/val.jsonl
+Saved 20 examples to data/test.jsonl
+
+Split summary: 160 train | 20 val | 20 test
+Leakage check: {'distinct_answers': 97, 'val_answers_seen_in_train': 0, 'test_answers_seen_in_train': 0}
+
+Dataset preparation complete. Ready to upload to the GPU instance.
+Validation report written to data/validation_report.json

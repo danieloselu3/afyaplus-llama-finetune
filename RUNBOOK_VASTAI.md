@@ -35,7 +35,7 @@ cd afyaplus-llama-finetune
 pip install -r requirements.txt
 
 export HF_TOKEN=hf_your_token_here
-export VAST_PRICE_PER_HOUR=0.35        # <- the $/hr from your offer card
+export VAST_PRICE_PER_HOUR=0.78        # <- the $/hr from your offer card (0.78 for the run-1 RTX 4090)
 ```
 
 ## 4. Run everything
@@ -61,7 +61,7 @@ If the browser or SSH drops, reconnect and run `tmux attach`.
 
 ## 5. Download the results and destroy the instance
 
-The pipeline ends by writing `results_bundle.tar.gz` (about 30MB). From your **laptop**, using the port and host from the instance card:
+The pipeline ends by writing `results_bundle.tar.gz` (about 170MB, mostly the LoRA adapter). From your **laptop**, using the port and host from the instance card:
 
 ```bash
 scp -P <port> root@<host>:/workspace/afyaplus-llama-finetune/results_bundle.tar.gz .

@@ -7,13 +7,16 @@
 #   3. A leakage-aware split: the 200 questions share only 97 distinct answers,
 #      so a naive shuffle puts identical answer text in train AND test. Records
 #      are grouped by answer and whole groups are assigned to one split.
+#   4. 20 clinical-redirect records (data/raw/safety_refusals.json). Run 1 had
+#      no example of declining a clinical question and answered a child's
+#      fever with dosing advice; these teach the refusal itself.
 import json
 import os
 import random
 from collections import Counter, defaultdict
 
 from config import (BASE_MODEL, DATA_DIR, DISCLAIMER, MAX_SEQ_LEN, RAW_DATA,
-                    SYSTEM_PROMPT, has_disclaimer, scope_violations)
+                    SAFETY_DATA, SYSTEM_PROMPT, has_disclaimer, scope_violations)
 
 SEED = 42
 SPLIT = (0.80, 0.10, 0.10)
@@ -36,6 +39,8 @@ TOPICS = [
 
 
 def topic_of(record: dict) -> str:
+    if record.get("category") == "clinical_redirect":
+        return "Clinical redirect (safety)"
     for text in (record["question"].lower(), record["answer"].lower()):
         for name, keys in TOPICS:
             if any(k in text for k in keys):
@@ -244,11 +249,16 @@ def save_splits(examples: list, split_idx: dict, output_dir: str = DATA_DIR) -> 
 if __name__ == "__main__":
     raw = load_and_validate_data(RAW_DATA)
     added = normalise_disclaimer(raw)
-    print(f"Loaded {len(raw)} records; appended the mandatory disclaimer to {added}")
+    with open(SAFETY_DATA, "r", encoding="utf-8") as f:
+        safety = [dict(r, category="clinical_redirect") for r in json.load(f)]
+    print(f"Loaded {len(raw)} curated records (disclaimer appended to {added}) "
+          f"+ {len(safety)} clinical-redirect records")
+    raw = raw + safety
 
     formatted = [format_example(r) for r in raw]
     report = validate_dataset(formatted)
     report["disclaimers_appended"] = added
+    report["clinical_redirect_records"] = len(safety)
     report["coverage_by_topic"] = dict(Counter(topic_of(r) for r in raw).most_common())
 
     print("\n=== DATASET VALIDATION REPORT ===")

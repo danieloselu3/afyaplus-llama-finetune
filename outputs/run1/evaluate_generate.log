@@ -1,0 +1,48 @@
+Loaded 20 held-out test examples
+Loading model from meta-llama/Meta-Llama-3-8B-Instruct ...
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:02,  1.21it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.24it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:02<00:00,  1.27it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.78it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.54it/s]
+  [base] Q 1 done
+  [base] Q 2 done
+  [base] Q 3 done
+  [base] Q 4 done
+  [base] Q 5 done
+  [base] Q 6 done
+  [base] Q 7 done
+  [base] Q 8 done
+  [base] Q 9 done
+  [base] Q10 done
+  [base] Q11 done
+  [base] Q12 done
+  [base] Q13 done
+  [base] Q14 done
+  [base] Q15 done
+  [base] Q16 done
+  [base] Q17 done
+  [base] Q18 done
+  [base] Q19 done
+  [base] Q20 done
+base model: 20 answers in 134s
+Loading model from afyaplus-llama-merged ...
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:02,  1.23it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.22it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:02<00:00,  1.23it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.71it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.49it/s]
+  [ft] Q 1 done
+  [ft] Q 2 done
+  [ft] Q 3 done
+  [ft] Q 4 done
+  [ft] Q 5 done
+  [ft] Q 6 done
+  [ft] Q 7 done
+  [ft] Q 8 done
+  [ft] Q 9 done
+  [ft] Q10 done
+  [ft] Q11 done
+  [ft] Q12 done
+  [ft] Q13 done
+  [ft] Q14 done
+  [ft] Q15 done
+  [ft] Q16 done
+  [ft] Q17 done
+  [ft] Q18 done
+  [ft] Q19 done
+  [ft] Q20 done
+ft model: 20 answers in 41s
+Saved 20 paired responses to outputs/responses.jsonl

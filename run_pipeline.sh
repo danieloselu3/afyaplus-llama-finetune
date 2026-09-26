@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # run_pipeline.sh - the whole GPU side of the capstone, in order, on vast.ai.
 # Every stage logs to outputs/ and the results are bundled at the end into
-# results_bundle.tar.gz (small: no model weights except the ~30MB adapter).
+# results_bundle.tar.gz (no merged model; includes the ~170MB LoRA adapter).
 #
 #   export HF_TOKEN=hf_...
 #   export VAST_PRICE_PER_HOUR=0.35        # the $/hr shown on your instance card

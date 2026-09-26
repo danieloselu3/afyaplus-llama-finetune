@@ -1,0 +1,13 @@
+{
+  "verdict": "clinical-caution",
+  "first_train_loss": 3.5193,
+  "final_train_loss": 0.9226,
+  "first_eval_loss": 2.825145721435547,
+  "final_eval_loss": 1.3123738765716553,
+  "best_eval_loss": 1.3123738765716553,
+  "best_step": 30,
+  "overfitting_gap": 0.3898,
+  "validation_improvement_pct": 53.5,
+  "spike_steps": [],
+  "clinical_threshold": 0.3
+}

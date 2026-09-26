@@ -36,18 +36,23 @@ LORA_ALPHA = 32
 LORA_DROPOUT = 0.05
 # Light regularisation on the adapter. 160 examples is a small dataset; 0.05
 # is the low end of the 0.05-0.1 range. Raise to 0.1 if the run overfits.
-TARGET_MODULES = ["q_proj", "k_proj", "v_proj", "o_proj"]
-# All four attention projections: the layers that decide what the model
-# attends to, which is where tone and domain routing live. MLP layers are left
-# frozen to protect general knowledge and keep the adapter at ~0.08% of params.
+TARGET_MODULES = ["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj"]
+# All linear layers (attention + MLP), as the QLoRA paper recommends. Run 1
+# adapted attention only: the model learned the AfyaPlus voice and disclaimer
+# but invented procedures ("rebook within three working days" instead of 14
+# days). Factual associations live mostly in the MLP layers, so run 2 adapts
+# them too. Still ~0.5% of parameters; the base weights stay frozen.
 
 # --- Optimisation -----------------------------------------------------------
 LEARNING_RATE = 2e-4
 # The reliable LoRA-on-LLaMA starting point (course range 2e-4 to 3e-4). Halve
 # it if loss oscillates; double it if loss barely moves.
-NUM_EPOCHS = 3
-# Three passes over 160 examples = 30 optimiser steps. Enough for the loss to
-# settle; load_best_model_at_end guards against the last epoch overfitting.
+NUM_EPOCHS = 5
+# Run 1 (3 epochs, 30 steps) was still improving at the final step: validation
+# loss 1.34 -> 1.31 over the last 5 steps, best checkpoint = last checkpoint.
+# Five epochs give the loss room to bottom out; load_best_model_at_end keeps
+# whichever checkpoint generalised best, so extra epochs cannot make the saved
+# adapter worse on validation.
 BATCH_SIZE = 4
 # Examples per forward pass. Fits comfortably in 24GB at 512 tokens in 4-bit.
 GRAD_ACCUM = 4
@@ -66,9 +71,9 @@ OPTIMIZER = "paged_adamw_8bit"
 LOGGING_STEPS = 2
 EVAL_STEPS = 5
 SAVE_STEPS = 5
-# The course used 10/10/10, which yields only three points per curve on a
-# 30-step run. Logging every 2 steps and evaluating every 5 gives 15 training
-# and 6 validation points: enough resolution to diagnose the loss curve.
+# The course used 10/10/10, which yields only a handful of points per curve on
+# a short run. Logging every 2 steps and evaluating every 5 gives ~5 training
+# and 2 validation points per epoch: enough resolution to diagnose the curve.
 SAVE_TOTAL_LIMIT = 3
 # Keep disk bounded; the best checkpoint is always retained.
 
@@ -139,8 +144,10 @@ model = get_peft_model(model, lora_config)
 trainable = sum(p.numel() for p in model.parameters() if p.requires_grad)
 total = sum(p.numel() for p in model.parameters())
 print(f"Trainable parameters: {trainable:,} ({100 * trainable / total:.2f}% of {total:,})")
-if trainable / total > 0.01:
-    raise SystemExit("More than 1% of parameters are trainable: the LoRA freeze failed. Stopping.")
+# total is understated in 4-bit (two weights per packed byte), so compare
+# against a generous ceiling: a failed freeze would show tens of percent.
+if trainable / total > 0.05:
+    raise SystemExit("More than 5% of parameters are trainable: the LoRA freeze failed. Stopping.")
 
 # ------------------------------ LOAD DATASET -----------------------------
 dataset = load_dataset(

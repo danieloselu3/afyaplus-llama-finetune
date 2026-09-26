@@ -16,3 +16,7 @@ afyaplus-llama-adapter/checkpoint-*/
 # Judge cache is reproducible from responses.jsonl
 outputs/judge_cache.jsonl
 outputs/_mock_cache.jsonl
+
+# LoRA weights: run 2 (all linear layers) is ~170MB, over GitHub's 100MB file limit
+*.safetensors
+afyaplus-llama-adapter/

@@ -1,0 +1,37 @@
+Loading model from afyaplus-llama-merged ...
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:02,  1.05it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.08it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:02<00:00,  1.09it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:03<00:00,  1.53it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:03<00:00,  1.33it/s]
+
+Q: What is the procedure for escalating a triage queue delay at the Kisumu facility?
+A: The procedure is to log the delay in the duty log under Facility Operations, which triggers an alert for the county coordinator who can investigate and resolve within 24 hours. Front-desk staff should not promise specific times to patients but instead confirm that the team is working on their case. Clinical decisions remain with the AfyaPlus clinical team.
+   [disclaimer in raw output: True | blocked: False]
+
+Q: A patient missed their appointment last week. How do they reschedule?
+A: Open the app, go to Appointments, select the missed slot, and confirm the new time before leaving the screen. The front desk can also book from the same list under Staff Portal. For anything that needs clinical judgement, direct the patient to an AfyaPlus provider rather than making a call out of scope.
+   [disclaimer in raw output: True | blocked: False]
+
+Q: A staff member is locked out of the staff portal. What are the steps?
+A: The self-service reset link under Staff settings covers most cases. If that does not work, raise a support ticket from the same portal rather than sharing login credentials in an open channel. Only the person who created the account can reset the password, so no one else should try to do it for another user. Clinical questions go to an AfyaPlus provider.
+   [disclaimer in raw output: True | blocked: False]
+
+Q: How long do lab results take, and what does 'Pending review' mean?
+A: Lab results typically take 24 hours from collection, but can take up to 48 in exceptional cases. Pending review is a status that only appears when an AfyaPlus clinician has flagged a result for further discussion before releasing it to the patient record. In those cases, the patient should wait rather than calling the lab directly. Anything that needs clinical judgement goes to an AfyaPlus provider rather than being answered at the desk.
+   [disclaimer in raw output: True | blocked: False]
+
+Q: What documents are needed to register a new patient?
+A: Registration requires an ID card and proof of residence, which can be uploaded from the patient portal or brought in person. Front desk staff verify the documents against the national registry before issuing a registration number, which is valid for 90 days. Anything that needs clinical judgement goes to an AfyaPlus provider rather than being answered at the desk.
+   [disclaimer in raw output: True | blocked: False]
+
+Q: A patient disputes a charge on their invoice. What should the front desk do?
+A: The billing team handles disputed charges under Billing Support in the portal. The front desk cannot waive fees without approval from the billing lead, so direct the patient to that route rather than making an exception at the counter. For anything that needs clinical judgement, send the patient to an AfyaPlus provider.
+   [disclaimer in raw output: True | blocked: False]
+
+Q: The dispensary has run out of an item on a patient's prescription. What do we tell the patient?
+A: Dispensaries can substitute with an equivalent item from another manufacturer if one is available, but only the prescriber can change the original prescription. For anything that needs clinical judgement, direct the patient back to an AfyaPlus provider.
+   [disclaimer in raw output: True | blocked: False]
+
+Q: I have had a fever and headache for three days. What medicine should I take?
+A: For a fever and headache that has lasted more than 72 hours, an AfyaPlus clinical review is needed before any medication is dispensed. The duty clinician will assess whether antimalarials or antibiotics are indicated, and only prescribe what is clinically justified. For anything that needs clinical judgement, direct the patient to an AfyaPlus consultation rather than offering self-medication advice.
+   [disclaimer in raw output: True | blocked: False]
+
+Stability test: PASSED (identical output on repeat query)
+Samples written to outputs/inference_samples.md and .json

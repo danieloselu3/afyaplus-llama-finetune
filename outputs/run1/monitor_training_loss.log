@@ -1,0 +1,38 @@
+=== TRAINING LOSS PROGRESSION ===
+ step  train_loss  epoch
+    2      3.5193    0.2
+    4      3.0864    0.4
+    6      2.8324    0.6
+    8      2.3891    0.8
+   10      2.1094    1.0
+   12      1.7306    1.2
+   14      1.6182    1.4
+   16      1.4377    1.6
+   18      1.3476    1.8
+   20      1.2368    2.0
+   22      1.1327    2.2
+   24      1.0211    2.4
+   26      1.0103    2.6
+   28      0.8925    2.8
+   30      0.9226    3.0
+
+=== VALIDATION LOSS PROGRESSION ===
+ step  eval_loss  epoch
+    5   2.825146    0.5
+   10   2.085775    1.0
+   15   1.716542    1.5
+   20   1.470619    2.0
+   25   1.336267    2.5
+   30   1.312374    3.0
+
+=== TRAINING SUMMARY ===
+Training loss:         3.5193 -> 0.9226
+Validation loss:       2.8251 -> 1.3124
+Best validation loss:  1.3124  (at step 30)
+Validation improvement:  53.5%
+Overfitting gap:       0.3898  (final val - final train)
+
+[CLINICAL CAUTION] Overfitting gap 0.3898 exceeds the safety threshold of 0.3.
+ACTION: Review before deploying; consider higher lora_dropout or fewer epochs.
+
+Loss curve saved to outputs/loss_curve.png; diagnosis in outputs/loss_diagnosis.json
