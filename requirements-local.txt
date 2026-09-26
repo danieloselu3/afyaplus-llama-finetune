@@ -1,0 +1,8 @@
+# Lightweight local environment (laptop, no GPU): data prep, loss-curve
+# analysis, and scoring/judging the responses generated on vast.ai.
+pandas
+matplotlib
+tabulate
+rouge-score
+anthropic
+python-dotenv

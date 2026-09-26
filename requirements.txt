@@ -1,0 +1,21 @@
+# GPU environment (vast.ai instance). torch comes from the PyTorch template
+# image (tested range: torch 2.3-2.5, CUDA 12.x); it is deliberately not pinned
+# here so pip does not replace the image's CUDA build.
+#
+# The course pinned transformers==4.41.2 / trl==0.8.6 / peft==0.11.1, but
+# transformers 4.41 cannot load LLaMA 3.1 (its rope_scaling "llama3" config
+# arrived in 4.43). These pins are the nearest mutually compatible set.
+transformers==4.44.2
+trl==0.9.6
+peft==0.12.0
+bitsandbytes==0.43.3
+accelerate==0.33.0
+datasets==2.21.0
+huggingface_hub==0.24.6
+numpy<2.0
+python-dotenv
+pandas
+matplotlib
+tabulate
+rouge-score
+anthropic

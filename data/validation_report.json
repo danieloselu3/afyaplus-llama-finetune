@@ -1,0 +1,36 @@
+{
+  "tokenizer": "approximate (chars/4 + 30)",
+  "total_examples": 200,
+  "errors": [],
+  "warnings": [],
+  "error_count": 0,
+  "warning_count": 0,
+  "avg_tokens": 298.4,
+  "min_tokens": 258,
+  "max_tokens": 324,
+  "valid_examples": 200,
+  "disclaimers_appended": 59,
+  "coverage_by_topic": {
+    "Appointments & booking": 42,
+    "System access": 36,
+    "Billing & coverage": 19,
+    "Dispensary & stock": 19,
+    "Profile updates": 17,
+    "Lab results": 15,
+    "Triage escalation": 13,
+    "Referral codes": 12,
+    "Registration & identity": 11,
+    "Records transfer": 10,
+    "Family & dependants": 6
+  },
+  "split_sizes": {
+    "train": 160,
+    "val": 20,
+    "test": 20
+  },
+  "leakage": {
+    "distinct_answers": 97,
+    "val_answers_seen_in_train": 0,
+    "test_answers_seen_in_train": 0
+  }
+}

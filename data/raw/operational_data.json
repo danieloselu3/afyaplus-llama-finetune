@@ -1,0 +1,802 @@
+[
+  {
+    "question": "How do I update a patient's phone number in AfyaPlus?",
+    "answer": "Patients can edit their own phone number and address under Settings and Profile. Identity fields, meaning the national ID and health record number, cannot be edited in the app at all and must be handled at the registration desk with original documents present. Clinical questions are always routed to an AfyaPlus provider rather than answered at the desk."
+  },
+  {
+    "question": "From the Mombasa facility team: A patient at the Mombasa facility wants to book a visit on the app. What are the steps?",
+    "answer": "Booking is done under Appointments in the app: select the facility, choose the slot, confirm with the patient number, and wait for the SMS confirmation. Front-desk staff can complete the same booking from the staff portal for patients who do not use smartphones. Queries about which service to book belong with the facility team, not the assistant."
+  },
+  {
+    "question": "As a front-desk clerk: Where does a front-desk clerk in Nairobi direct billing coverage questions?",
+    "answer": "Under Billing, the Coverage check takes the insurer name and member number and returns the covered services for that plan. If the patient disagrees with the result, log the case under Billing support; disputes are resolved within three working days, and the front desk should not promise a different outcome in the meantime. For anything that needs clinical judgement, direct the patient to an AfyaPlus provider."
+  },
+  {
+    "question": "A patient's referral code expired. Can the front desk renew it?",
+    "answer": "Referral codes are issued by the reviewing clinician after a consultation and appear under Referrals in the app, valid for 30 days each. An expired code cannot be renewed by the front desk or in the app; the patient books a follow-up consultation and the clinician issues a new one. For anything that needs clinical judgement, direct the patient to an AfyaPlus provider."
+  },
+  {
+    "question": "A patient believes an invoice is wrong. How is a billing dispute raised?",
+    "answer": "The route is Billing support, quoting the invoice number. Cases close within three working days, and until then no one at the facility should promise a refund, an adjustment, or a specific outcome, since only the billing team can make that call."
+  },
+  {
+    "question": "As a duty nurse: Why does the staff portal log users out, and what is the correct response?",
+    "answer": "The staff portal ends idle sessions after 20 minutes as a data-protection measure, and unsaved work in open forms is discarded. The correct habit is saving drafts before stepping away; repeated unexpected logouts on an active session should be raised as a support ticket with the time and terminal noted."
+  },
+  {
+    "question": "As a duty nurse: How does a patient book a clinic appointment through the AfyaPlus app?",
+    "answer": "Open the AfyaPlus app and go to Appointments, pick the facility and a time slot, then confirm with the patient number. A confirmation SMS should arrive within about five minutes. If no slots show for the chosen facility, refresh the facility list first, and if the problem continues, the front desk can book on the patient's behalf from the staff portal."
+  },
+  {
+    "question": "Which dependant details can a guardian edit, and which cannot be changed in the app?",
+    "answer": "Under Family, a guardian can book appointments for a dependant and keep their contact details current. The one field that stays locked is the national identifier, which follows the same registration-desk process as any identity change. Clinical questions are always routed to an AfyaPlus provider rather than answered at the desk."
+  },
+  {
+    "question": "As a duty nurse: As a front-desk clerk, how do I complete a new registration end to end?",
+    "answer": "Registration takes three steps: verify identity with the national ID or passport, confirm the phone number via the SMS code, and issue a health record number from the registration module. A new record only becomes active once the duty administrator countersigns, which should happen the same day. As with every workflow, clinical decisions stay with the AfyaPlus clinical team."
+  },
+  {
+    "question": "From the Machakos facility team: How are dispensary stock queries logged, and who gets alerted?",
+    "answer": "Log a stock query from the item card under Dispensary. That alerts the county supply coordinator automatically, and the item card shows the expected restock date, which is what the patient should be told. Questions about substituting a different item are clinical decisions and go back to the prescriber, never to the desk. For anything that needs clinical judgement, direct the patient to an AfyaPlus provider."
+  },
+  {
+    "question": "From the Nakuru facility team: A patient believes an invoice is wrong. How is a billing dispute raised?",
+    "answer": "Raise the dispute under Billing support with the invoice number attached. The resolution window is three working days, and staff should share exactly that timeline without predicting the outcome. Refunds or adjustments only happen after Billing support closes the case. As with every workflow, clinical decisions stay with the AfyaPlus clinical team."
+  },
+  {
+    "question": "What is the escalation procedure when a patient has waited too long in the triage queue?",
+    "answer": "The threshold is 30 minutes past the allocated triage slot. At that point the staff member logs the case under Queue Escalation, tags the duty nurse practitioner, and notes the patient's status in the log. The escalation board is reviewed every 15 minutes, so a properly logged case is picked up quickly. As with every workflow, clinical decisions stay with the AfyaPlus clinical team."
+  },
+  {
+    "question": "From the Nakuru facility team: How often are queue escalations reviewed, and what must be recorded with each one?",
+    "answer": "If a patient has waited more than 30 minutes past their triage slot, log the delay under Queue Escalation in the staff portal, tag the duty nurse practitioner, and record the patient's current status. Escalations are reviewed every 15 minutes. This is a scheduling and routing procedure; any clinical assessment stays with the clinical team. For anything that needs clinical judgement, direct the patient to an AfyaPlus provider."
+  },
+  {
+    "question": "From the Machakos facility team: What is the rebooking window for missed appointments, and what happens after it lapses?",
+    "answer": "A missed appointment can be rebooked within 14 days at no penalty: the patient opens My Appointments, selects the missed visit, and taps Reschedule. Once the 14 days lapse, the booking expires and a new referral code is needed from the reviewing clinician before a fresh appointment can be made."
+  },
+  {
+    "question": "As a community health worker: What is the resolution timeline for billing disputes, and what should staff avoid promising?",
+    "answer": "The route is Billing support, quoting the invoice number. Cases close within three working days, and until then no one at the facility should promise a refund, an adjustment, or a specific outcome, since only the billing team can make that call. As with every workflow, clinical decisions stay with the AfyaPlus clinical team."
+  },
+  {
+    "question": "As a community health worker: The password reset code did not arrive. What is the checklist before raising a ticket?",
+    "answer": "Use Forgot Password on the login screen; the reset code goes to the registered phone number and expires after 15 minutes. If the code does not arrive, confirm the number on record is current, ask the patient to check signal and retry once, and only then raise a support ticket from the staff portal."
+  },
+  {
+    "question": "As a front-desk clerk: How often are queue escalations reviewed, and what must be recorded with each one?",
+    "answer": "The threshold is 30 minutes past the allocated triage slot. At that point the staff member logs the case under Queue Escalation, tags the duty nurse practitioner, and notes the patient's status in the log. The escalation board is reviewed every 15 minutes, so a properly logged case is picked up quickly."
+  },
+  {
+    "question": "As a community health worker: As a front-desk clerk, how do I complete a new registration end to end?",
+    "answer": "Registration takes three steps: verify identity with the national ID or passport, confirm the phone number via the SMS code, and issue a health record number from the registration module. A new record only becomes active once the duty administrator countersigns, which should happen the same day. Clinical questions are always routed to an AfyaPlus provider rather than answered at the desk."
+  },
+  {
+    "question": "Which documents and checks are required before a new patient record goes active?",
+    "answer": "Registration takes three steps: verify identity with the national ID or passport, confirm the phone number via the SMS code, and issue a health record number from the registration module. A new record only becomes active once the duty administrator countersigns, which should happen the same day. For anything that needs clinical judgement, direct the patient to an AfyaPlus provider."
+  },
+  {
+    "question": "How does a patient reset a forgotten portal password?",
+    "answer": "Use Forgot Password on the login screen; the reset code goes to the registered phone number and expires after 15 minutes. If the code does not arrive, confirm the number on record is current, ask the patient to check signal and retry once, and only then raise a support ticket from the staff portal. Clinical questions are always routed to an AfyaPlus provider rather than answered at the desk."
+  },
+  {
+    "question": "From the Machakos facility team: What are the steps when a colleague in Machakos cannot log in to the staff portal?",
+    "answer": "Verify the staff member's identity against the duty roster, then raise a lockout ticket in the admin console. Only the facility administrator can reset credentials. Sharing another person's login as a workaround is a violation of the AfyaPlus access policy and must never happen, even under time pressure. As with every workflow, clinical decisions stay with the AfyaPlus clinical team."
+  },
+  {
+    "question": "From the Nakuru facility team: Why does the staff portal log users out, and what is the correct response?",
+    "answer": "The staff portal ends idle sessions after 20 minutes as a data-protection measure, and unsaved work in open forms is discarded. The correct habit is saving drafts before stepping away; repeated unexpected logouts on an active session should be raised as a support ticket with the time and terminal noted."
+  },
+  {
+    "question": "A patient in Kiambu asks when their laboratory results will appear. What do I tell them?",
+    "answer": "Results appear under Results in the app, normally within 48 hours of sample collection. A result marked Pending review has been flagged by a clinician, who will call the patient before it is released; staff should not read out or interpret pending results. Questions about what a result means always go to the reviewing clinician. Clinical questions are always routed to an AfyaPlus provider rather than answered at the desk."
+  },
+  {
+    "question": "What are the steps to register a new patient at the Kisumu facility?",
+    "answer": "Collect the national identifier or passport, verify the phone number with the SMS code, and assign a health record number from the registration module. The record stays inactive until the duty administrator countersigns it, so hand it over for countersigning before the patient leaves the desk."
+  },
+  {
+    "question": "As a front-desk clerk in Kiambu, how should I guide a patient through app booking?",
+    "answer": "Open the AfyaPlus app and go to Appointments, pick the facility and a time slot, then confirm with the patient number. A confirmation SMS should arrive within about five minutes. If no slots show for the chosen facility, refresh the facility list first, and if the problem continues, the front desk can book on the patient's behalf from the staff portal."
+  },
+  {
+    "question": "As a community health worker: Where can a patient see their active referral codes in the app?",
+    "answer": "Active codes are listed under Referrals, each with a 30-day validity from issue. Only the reviewing clinician can issue or reissue a code, so once one expires, the correct route is a follow-up consultation rather than a front-desk request. Clinical questions are always routed to an AfyaPlus provider rather than answered at the desk."
+  },
+  {
+    "question": "Where can a patient see their active referral codes in the app?",
+    "answer": "Active codes are listed under Referrals, each with a 30-day validity from issue. Only the reviewing clinician can issue or reissue a code, so once one expires, the correct route is a follow-up consultation rather than a front-desk request."
+  },
+  {
+    "question": "How often are queue escalations reviewed, and what must be recorded with each one?",
+    "answer": "If a patient has waited more than 30 minutes past their triage slot, log the delay under Queue Escalation in the staff portal, tag the duty nurse practitioner, and record the patient's current status. Escalations are reviewed every 15 minutes. This is a scheduling and routing procedure; any clinical assessment stays with the clinical team. As with every workflow, clinical decisions stay with the AfyaPlus clinical team."
+  },
+  {
+    "question": "As a community health worker: A clerk in Mombasa keeps losing their portal session mid-task. What should they check?",
+    "answer": "Idle sessions expire at 20 minutes by policy. If sessions are dropping while the clerk is actively working, note the exact times and the terminal identifier and raise a support ticket, since that pattern points to a connectivity or terminal issue rather than the timeout policy. For anything that needs clinical judgement, direct the patient to an AfyaPlus provider."
+  },
+  {
+    "question": "As a duty nurse: A patient's referral code expired. Can the front desk renew it?",
+    "answer": "Referral codes are issued by the reviewing clinician after a consultation and appear under Referrals in the app, valid for 30 days each. An expired code cannot be renewed by the front desk or in the app; the patient books a follow-up consultation and the clinician issues a new one. As with every workflow, clinical decisions stay with the AfyaPlus clinical team."
+  },
+  {
+    "question": "As a front-desk clerk: Why does the staff portal log users out, and what is the correct response?",
+    "answer": "Idle sessions expire at 20 minutes by policy. If sessions are dropping while the clerk is actively working, note the exact times and the terminal identifier and raise a support ticket, since that pattern points to a connectivity or terminal issue rather than the timeout policy. Clinical questions are always routed to an AfyaPlus provider rather than answered at the desk."
+  },
+  {
+    "question": "As a community health worker: A staff member is locked out of the AfyaPlus system. What is the recovery procedure?",
+    "answer": "Verify the staff member's identity against the duty roster, then raise a lockout ticket in the admin console. Only the facility administrator can reset credentials. Sharing another person's login as a workaround is a violation of the AfyaPlus access policy and must never happen, even under time pressure."
+  },
+  {
+    "question": "What does the 'Pending review' status on a result mean, operationally?",
+    "answer": "Results appear under Results in the app, normally within 48 hours of sample collection. A result marked Pending review has been flagged by a clinician, who will call the patient before it is released; staff should not read out or interpret pending results. Questions about what a result means always go to the reviewing clinician. For anything that needs clinical judgement, direct the patient to an AfyaPlus provider."
+  },
+  {
+    "question": "What is the booking procedure if a patient cannot see any open slots for Mombasa?",
+    "answer": "Booking is done under Appointments in the app: select the facility, choose the slot, confirm with the patient number, and wait for the SMS confirmation. Front-desk staff can complete the same booking from the staff portal for patients who do not use smartphones. Queries about which service to book belong with the facility team, not the assistant. As with every workflow, clinical decisions stay with the AfyaPlus clinical team."
+  },
+  {
+    "question": "How is a patient record transferred between AfyaPlus facilities?",
+    "answer": "Raise a transfer request in the records module at the sending facility. The receiving facility's administrator must approve the request before the record moves, and the patient keeps the same health record number throughout, so nothing needs re-registering at the new facility."
+  },
+  {
+    "question": "As a community health worker: How often are queue escalations reviewed, and what must be recorded with each one?",
+    "answer": "The threshold is 30 minutes past the allocated triage slot. At that point the staff member logs the case under Queue Escalation, tags the duty nurse practitioner, and notes the patient's status in the log. The escalation board is reviewed every 15 minutes, so a properly logged case is picked up quickly."
+  },
+  {
+    "question": "What are the steps when a colleague in Mombasa cannot log in to the staff portal?",
+    "answer": "Verify the staff member's identity against the duty roster, then raise a lockout ticket in the admin console. Only the facility administrator can reset credentials. Sharing another person's login as a workaround is a violation of the AfyaPlus access policy and must never happen, even under time pressure. For anything that needs clinical judgement, direct the patient to an AfyaPlus provider."
+  },
+  {
+    "question": "As a community health worker: How does a patient retrieve their lab results in the app?",
+    "answer": "Standard laboratory results are released to the Results tab within 48 hours of collection. If a patient sees Pending review, that means a clinician is handling the release personally and will contact them, so no action is needed from the front desk beyond confirming the contact number is current."
+  },
+  {
+    "question": "A patient missed yesterday's visit. How do they rebook without starting over?",
+    "answer": "A missed appointment can be rebooked within 14 days at no penalty: the patient opens My Appointments, selects the missed visit, and taps Reschedule. Once the 14 days lapse, the booking expires and a new referral code is needed from the reviewing clinician before a fresh appointment can be made. As with every workflow, clinical decisions stay with the AfyaPlus clinical team."
+  },
+  {
+    "question": "As a duty nurse: A patient is relocating from Kisumu to another county. What happens to their record?",
+    "answer": "Raise a transfer request in the records module at the sending facility. The receiving facility's administrator must approve the request before the record moves, and the patient keeps the same health record number throughout, so nothing needs re-registering at the new facility. Clinical questions are always routed to an AfyaPlus provider rather than answered at the desk."
+  },
+  {
+    "question": "From the Machakos facility team: What should the patient be told when an item is out of stock?",
+    "answer": "Log a stock query from the item card under Dispensary. That alerts the county supply coordinator automatically, and the item card shows the expected restock date, which is what the patient should be told. Questions about substituting a different item are clinical decisions and go back to the prescriber, never to the desk."
+  },
+  {
+    "question": "From the Nakuru facility team: What should the patient be told when an item is out of stock?",
+    "answer": "Staff open the item under Dispensary and log a stock query, which notifies the county supply coordinator. The expected restock date on the item card is the information to share with the patient. Any change to what was prescribed is for the prescriber to decide, not dispensary or front-desk staff."
+  },
+  {
+    "question": "A patient is relocating from Mombasa to another county. What happens to their record?",
+    "answer": "Transfers start with a request in the records module, which the receiving facility administrator approves. The health record number never changes, so once the approval lands, the patient simply appears in the new facility's list with full history intact. For anything that needs clinical judgement, direct the patient to an AfyaPlus provider."
+  },
+  {
+    "question": "As a duty nurse: A prescribed item shows out of stock at the Kisumu dispensary. What does staff do?",
+    "answer": "Log a stock query from the item card under Dispensary. That alerts the county supply coordinator automatically, and the item card shows the expected restock date, which is what the patient should be told. Questions about substituting a different item are clinical decisions and go back to the prescriber, never to the desk."
+  },
+  {
+    "question": "As a duty nurse: What should the patient be told when an item is out of stock?",
+    "answer": "Log a stock query from the item card under Dispensary. That alerts the county supply coordinator automatically, and the item card shows the expected restock date, which is what the patient should be told. Questions about substituting a different item are clinical decisions and go back to the prescriber, never to the desk. Clinical questions are always routed to an AfyaPlus provider rather than answered at the desk."
+  },
+  {
+    "question": "A prescribed item shows out of stock at the Mombasa dispensary. What does staff do?",
+    "answer": "Log a stock query from the item card under Dispensary. That alerts the county supply coordinator automatically, and the item card shows the expected restock date, which is what the patient should be told. Questions about substituting a different item are clinical decisions and go back to the prescriber, never to the desk. As with every workflow, clinical decisions stay with the AfyaPlus clinical team."
+  },
+  {
+    "question": "As a duty nurse: As a duty nurse in Kisumu, when and how do I log a queue escalation?",
+    "answer": "If a patient has waited more than 30 minutes past their triage slot, log the delay under Queue Escalation in the staff portal, tag the duty nurse practitioner, and record the patient's current status. Escalations are reviewed every 15 minutes. This is a scheduling and routing procedure; any clinical assessment stays with the clinical team."
+  },
+  {
+    "question": "From the Kiambu facility team: A patient moved house and changed numbers. Which details can they edit themselves?",
+    "answer": "Phone numbers and addresses are self-service: Settings, then Profile, then edit and save. The national ID and the health record number are locked in the app; changing those requires a visit to the registration desk with the original documents, where the duty administrator countersigns the change. As with every workflow, clinical decisions stay with the AfyaPlus clinical team."
+  },
+  {
+    "question": "As a front-desk clerk, how do I complete a new registration end to end?",
+    "answer": "Registration takes three steps: verify identity with the national ID or passport, confirm the phone number via the SMS code, and issue a health record number from the registration module. A new record only becomes active once the duty administrator countersigns, which should happen the same day. Clinical questions are always routed to an AfyaPlus provider rather than answered at the desk."
+  },
+  {
+    "question": "From the Kisumu facility team: A patient disputes what the coverage check showed. What is the process and timeline?",
+    "answer": "The self-service route is Billing, then Coverage check, entering the insurer and member number. Disputes go to Billing support with the invoice or case reference and are handled within three working days. Coverage questions the tool cannot answer belong with the insurer, not with facility staff guessing. For anything that needs clinical judgement, direct the patient to an AfyaPlus provider."
+  },
+  {
+    "question": "As a duty nurse in Nakuru, when and how do I log a queue escalation?",
+    "answer": "If a patient has waited more than 30 minutes past their triage slot, log the delay under Queue Escalation in the staff portal, tag the duty nurse practitioner, and record the patient's current status. Escalations are reviewed every 15 minutes. This is a scheduling and routing procedure; any clinical assessment stays with the clinical team."
+  },
+  {
+    "question": "As a duty nurse in Kisumu, when and how do I log a queue escalation?",
+    "answer": "The threshold is 30 minutes past the allocated triage slot. At that point the staff member logs the case under Queue Escalation, tags the duty nurse practitioner, and notes the patient's status in the log. The escalation board is reviewed every 15 minutes, so a properly logged case is picked up quickly. As with every workflow, clinical decisions stay with the AfyaPlus clinical team."
+  },
+  {
+    "question": "As a front-desk clerk: What are the steps to register a new patient at the Kisumu facility?",
+    "answer": "Collect the national identifier or passport, verify the phone number with the SMS code, and assign a health record number from the registration module. The record stays inactive until the duty administrator countersigns it, so hand it over for countersigning before the patient leaves the desk. As with every workflow, clinical decisions stay with the AfyaPlus clinical team."
+  },
+  {
+    "question": "From the Nairobi facility team: A staff member is locked out of the AfyaPlus system. What is the recovery procedure?",
+    "answer": "Verify the staff member's identity against the duty roster, then raise a lockout ticket in the admin console. Only the facility administrator can reset credentials. Sharing another person's login as a workaround is a violation of the AfyaPlus access policy and must never happen, even under time pressure."
+  },
+  {
+    "question": "As a front-desk clerk in Machakos, how should I guide a patient through app booking?",
+    "answer": "Open the AfyaPlus app and go to Appointments, pick the facility and a time slot, then confirm with the patient number. A confirmation SMS should arrive within about five minutes. If no slots show for the chosen facility, refresh the facility list first, and if the problem continues, the front desk can book on the patient's behalf from the staff portal. For anything that needs clinical judgement, direct the patient to an AfyaPlus provider."
+  },
+  {
+    "question": "What is the fastest route to a follow-up consultation after a completed visit?",
+    "answer": "Open the completed visit under My Appointments and tap Book follow-up. The system offers the same clinician's next available slots where possible, falling back to the facility's general list if that clinician has no availability inside the booking window. For anything that needs clinical judgement, direct the patient to an AfyaPlus provider."
+  },
+  {
+    "question": "How are dispensary stock queries logged, and who gets alerted?",
+    "answer": "Log a stock query from the item card under Dispensary. That alerts the county supply coordinator automatically, and the item card shows the expected restock date, which is what the patient should be told. Questions about substituting a different item are clinical decisions and go back to the prescriber, never to the desk."
+  },
+  {
+    "question": "As a community health worker: What are the steps when a colleague in Kisumu cannot log in to the staff portal?",
+    "answer": "The procedure is: confirm identity against the duty roster, open a lockout ticket in the admin console, and wait for the facility administrator to reset the credentials. No one else can perform the reset, and credentials are never shared between staff, whatever the urgency."
+  },
+  {
+    "question": "From the Mombasa facility team: What is the resolution timeline for billing disputes, and what should staff avoid promising?",
+    "answer": "The route is Billing support, quoting the invoice number. Cases close within three working days, and until then no one at the facility should promise a refund, an adjustment, or a specific outcome, since only the billing team can make that call. As with every workflow, clinical decisions stay with the AfyaPlus clinical team."
+  },
+  {
+    "question": "As a community health worker: How does a patient book a clinic appointment through the AfyaPlus app?",
+    "answer": "Open the AfyaPlus app and go to Appointments, pick the facility and a time slot, then confirm with the patient number. A confirmation SMS should arrive within about five minutes. If no slots show for the chosen facility, refresh the facility list first, and if the problem continues, the front desk can book on the patient's behalf from the staff portal. For anything that needs clinical judgement, direct the patient to an AfyaPlus provider."
+  },
+  {
+    "question": "As a front-desk clerk: How does a patient retrieve their lab results in the app?",
+    "answer": "Standard laboratory results are released to the Results tab within 48 hours of collection. If a patient sees Pending review, that means a clinician is handling the release personally and will contact them, so no action is needed from the front desk beyond confirming the contact number is current."
+  },
+  {
+    "question": "How does a patient retrieve their lab results in the app?",
+    "answer": "Results appear under Results in the app, normally within 48 hours of sample collection. A result marked Pending review has been flagged by a clinician, who will call the patient before it is released; staff should not read out or interpret pending results. Questions about what a result means always go to the reviewing clinician. As with every workflow, clinical decisions stay with the AfyaPlus clinical team."
+  },
+  {
+    "question": "What are the steps to register a new patient at the Nakuru facility?",
+    "answer": "Registration takes three steps: verify identity with the national ID or passport, confirm the phone number via the SMS code, and issue a health record number from the registration module. A new record only becomes active once the duty administrator countersigns, which should happen the same day. For anything that needs clinical judgement, direct the patient to an AfyaPlus provider."
+  },
+  {
+    "question": "From the Kiambu facility team: Why does the staff portal log users out, and what is the correct response?",
+    "answer": "The staff portal ends idle sessions after 20 minutes as a data-protection measure, and unsaved work in open forms is discarded. The correct habit is saving drafts before stepping away; repeated unexpected logouts on an active session should be raised as a support ticket with the time and terminal noted. Clinical questions are always routed to an AfyaPlus provider rather than answered at the desk."
+  },
+  {
+    "question": "As a front-desk clerk: What is the escalation procedure when a patient has waited too long in the triage queue?",
+    "answer": "The threshold is 30 minutes past the allocated triage slot. At that point the staff member logs the case under Queue Escalation, tags the duty nurse practitioner, and notes the patient's status in the log. The escalation board is reviewed every 15 minutes, so a properly logged case is picked up quickly."
+  },
+  {
+    "question": "As a duty nurse: A patient is relocating from Machakos to another county. What happens to their record?",
+    "answer": "Transfers start with a request in the records module, which the receiving facility administrator approves. The health record number never changes, so once the approval lands, the patient simply appears in the new facility's list with full history intact. As with every workflow, clinical decisions stay with the AfyaPlus clinical team."
+  },
+  {
+    "question": "What should the patient be told when an item is out of stock?",
+    "answer": "Log a stock query from the item card under Dispensary. That alerts the county supply coordinator automatically, and the item card shows the expected restock date, which is what the patient should be told. Questions about substituting a different item are clinical decisions and go back to the prescriber, never to the desk. As with every workflow, clinical decisions stay with the AfyaPlus clinical team."
+  },
+  {
+    "question": "As a community health worker: Which documents and checks are required before a new patient record goes active?",
+    "answer": "Registration takes three steps: verify identity with the national ID or passport, confirm the phone number via the SMS code, and issue a health record number from the registration module. A new record only becomes active once the duty administrator countersigns, which should happen the same day."
+  },
+  {
+    "question": "How does a patient check what their insurance covers in AfyaPlus?",
+    "answer": "Under Billing, the Coverage check takes the insurer name and member number and returns the covered services for that plan. If the patient disagrees with the result, log the case under Billing support; disputes are resolved within three working days, and the front desk should not promise a different outcome in the meantime."
+  },
+  {
+    "question": "As a front-desk clerk: How does a patient check what their insurance covers in AfyaPlus?",
+    "answer": "The self-service route is Billing, then Coverage check, entering the insurer and member number. Disputes go to Billing support with the invoice or case reference and are handled within three working days. Coverage questions the tool cannot answer belong with the insurer, not with facility staff guessing. As with every workflow, clinical decisions stay with the AfyaPlus clinical team."
+  },
+  {
+    "question": "Who can reset staff credentials after a lockout, and what must never be done instead?",
+    "answer": "The procedure is: confirm identity against the duty roster, open a lockout ticket in the admin console, and wait for the facility administrator to reset the credentials. No one else can perform the reset, and credentials are never shared between staff, whatever the urgency. Clinical questions are always routed to an AfyaPlus provider rather than answered at the desk."
+  },
+  {
+    "question": "How does a patient book a clinic appointment through the AfyaPlus app?",
+    "answer": "Open the AfyaPlus app and go to Appointments, pick the facility and a time slot, then confirm with the patient number. A confirmation SMS should arrive within about five minutes. If no slots show for the chosen facility, refresh the facility list first, and if the problem continues, the front desk can book on the patient's behalf from the staff portal."
+  },
+  {
+    "question": "As a community health worker: A prescribed item shows out of stock at the Mombasa dispensary. What does staff do?",
+    "answer": "Staff open the item under Dispensary and log a stock query, which notifies the county supply coordinator. The expected restock date on the item card is the information to share with the patient. Any change to what was prescribed is for the prescriber to decide, not dispensary or front-desk staff."
+  },
+  {
+    "question": "From the Nakuru facility team: A patient missed yesterday's visit. How do they rebook without starting over?",
+    "answer": "Go to My Appointments, select the missed visit, and choose Reschedule. The window is 14 days from the missed date; after that the system closes the booking and the patient needs a new referral code, which only the reviewing clinician can issue. Front-desk staff cannot override an expired booking. Clinical questions are always routed to an AfyaPlus provider rather than answered at the desk."
+  },
+  {
+    "question": "As a front-desk clerk: How does a patient book a clinic appointment through the AfyaPlus app?",
+    "answer": "Booking is done under Appointments in the app: select the facility, choose the slot, confirm with the patient number, and wait for the SMS confirmation. Front-desk staff can complete the same booking from the staff portal for patients who do not use smartphones. Queries about which service to book belong with the facility team, not the assistant."
+  },
+  {
+    "question": "What is the rebooking window for missed appointments, and what happens after it lapses?",
+    "answer": "Go to My Appointments, select the missed visit, and choose Reschedule. The window is 14 days from the missed date; after that the system closes the booking and the patient needs a new referral code, which only the reviewing clinician can issue. Front-desk staff cannot override an expired booking. As with every workflow, clinical decisions stay with the AfyaPlus clinical team."
+  },
+  {
+    "question": "As a community health worker: A patient missed yesterday's visit. How do they rebook without starting over?",
+    "answer": "Go to My Appointments, select the missed visit, and choose Reschedule. The window is 14 days from the missed date; after that the system closes the booking and the patient needs a new referral code, which only the reviewing clinician can issue. Front-desk staff cannot override an expired booking."
+  },
+  {
+    "question": "As a front-desk clerk: How does a guardian manage a dependant's profile in AfyaPlus?",
+    "answer": "Guardians manage dependants under the Family section: contact details, appointment bookings, and reminders are all editable there. The dependant's national identifier is locked, exactly like an adult's, and can only be corrected at the registration desk with original documents. Clinical questions are always routed to an AfyaPlus provider rather than answered at the desk."
+  },
+  {
+    "question": "As a community health worker: What identity details cannot be changed in the app, and where are they changed?",
+    "answer": "Patients can edit their own phone number and address under Settings and Profile. Identity fields, meaning the national ID and health record number, cannot be edited in the app at all and must be handled at the registration desk with original documents present."
+  },
+  {
+    "question": "As a community health worker: Where does a front-desk clerk in Kiambu direct billing coverage questions?",
+    "answer": "Under Billing, the Coverage check takes the insurer name and member number and returns the covered services for that plan. If the patient disagrees with the result, log the case under Billing support; disputes are resolved within three working days, and the front desk should not promise a different outcome in the meantime. For anything that needs clinical judgement, direct the patient to an AfyaPlus provider."
+  },
+  {
+    "question": "As a community health worker: Which dependant details can a guardian edit, and which cannot be changed in the app?",
+    "answer": "Under Family, a guardian can book appointments for a dependant and keep their contact details current. The one field that stays locked is the national identifier, which follows the same registration-desk process as any identity change. For anything that needs clinical judgement, direct the patient to an AfyaPlus provider."
+  },
+  {
+    "question": "The password reset code did not arrive. What is the checklist before raising a ticket?",
+    "answer": "The self-service flow is Forgot Password, with a 15-minute code sent to the registered number. When the code fails to arrive, verify the registered number first, since an outdated number is the usual cause, and raise a support ticket only after one retry on a confirmed number. For anything that needs clinical judgement, direct the patient to an AfyaPlus provider."
+  },
+  {
+    "question": "As a community health worker: A patient at the Machakos facility wants to book a visit on the app. What are the steps?",
+    "answer": "Open the AfyaPlus app and go to Appointments, pick the facility and a time slot, then confirm with the patient number. A confirmation SMS should arrive within about five minutes. If no slots show for the chosen facility, refresh the facility list first, and if the problem continues, the front desk can book on the patient's behalf from the staff portal. For anything that needs clinical judgement, direct the patient to an AfyaPlus provider."
+  },
+  {
+    "question": "As a duty nurse: A patient missed yesterday's visit. How do they rebook without starting over?",
+    "answer": "Go to My Appointments, select the missed visit, and choose Reschedule. The window is 14 days from the missed date; after that the system closes the booking and the patient needs a new referral code, which only the reviewing clinician can issue. Front-desk staff cannot override an expired booking. Clinical questions are always routed to an AfyaPlus provider rather than answered at the desk."
+  },
+  {
+    "question": "How does a guardian manage a dependant's profile in AfyaPlus?",
+    "answer": "Under Family, a guardian can book appointments for a dependant and keep their contact details current. The one field that stays locked is the national identifier, which follows the same registration-desk process as any identity change."
+  },
+  {
+    "question": "As a front-desk clerk: The password reset code did not arrive. What is the checklist before raising a ticket?",
+    "answer": "The self-service flow is Forgot Password, with a 15-minute code sent to the registered number. When the code fails to arrive, verify the registered number first, since an outdated number is the usual cause, and raise a support ticket only after one retry on a confirmed number."
+  },
+  {
+    "question": "As a community health worker: How does a patient obtain a referral code, and how long does it stay valid?",
+    "answer": "Referral codes are issued by the reviewing clinician after a consultation and appear under Referrals in the app, valid for 30 days each. An expired code cannot be renewed by the front desk or in the app; the patient books a follow-up consultation and the clinician issues a new one. As with every workflow, clinical decisions stay with the AfyaPlus clinical team."
+  },
+  {
+    "question": "As a front-desk clerk: What should the patient be told when an item is out of stock?",
+    "answer": "Staff open the item under Dispensary and log a stock query, which notifies the county supply coordinator. The expected restock date on the item card is the information to share with the patient. Any change to what was prescribed is for the prescriber to decide, not dispensary or front-desk staff. For anything that needs clinical judgement, direct the patient to an AfyaPlus provider."
+  },
+  {
+    "question": "What identity details cannot be changed in the app, and where are they changed?",
+    "answer": "Phone numbers and addresses are self-service: Settings, then Profile, then edit and save. The national ID and the health record number are locked in the app; changing those requires a visit to the registration desk with the original documents, where the duty administrator countersigns the change."
+  },
+  {
+    "question": "As a community health worker: A patient's referral code expired. Can the front desk renew it?",
+    "answer": "Referral codes are issued by the reviewing clinician after a consultation and appear under Referrals in the app, valid for 30 days each. An expired code cannot be renewed by the front desk or in the app; the patient books a follow-up consultation and the clinician issues a new one. Clinical questions are always routed to an AfyaPlus provider rather than answered at the desk."
+  },
+  {
+    "question": "As a front-desk clerk in Kisumu, how should I guide a patient through app booking?",
+    "answer": "Open the AfyaPlus app and go to Appointments, pick the facility and a time slot, then confirm with the patient number. A confirmation SMS should arrive within about five minutes. If no slots show for the chosen facility, refresh the facility list first, and if the problem continues, the front desk can book on the patient's behalf from the staff portal."
+  },
+  {
+    "question": "From the Nakuru facility team: What identity details cannot be changed in the app, and where are they changed?",
+    "answer": "Phone numbers and addresses are self-service: Settings, then Profile, then edit and save. The national ID and the health record number are locked in the app; changing those requires a visit to the registration desk with the original documents, where the duty administrator countersigns the change."
+  },
+  {
+    "question": "As a front-desk clerk: A patient's referral code expired. Can the front desk renew it?",
+    "answer": "Active codes are listed under Referrals, each with a 30-day validity from issue. Only the reviewing clinician can issue or reissue a code, so once one expires, the correct route is a follow-up consultation rather than a front-desk request. Clinical questions are always routed to an AfyaPlus provider rather than answered at the desk."
+  },
+  {
+    "question": "As a community health worker: What is the booking procedure if a patient cannot see any open slots for Kiambu?",
+    "answer": "Open the AfyaPlus app and go to Appointments, pick the facility and a time slot, then confirm with the patient number. A confirmation SMS should arrive within about five minutes. If no slots show for the chosen facility, refresh the facility list first, and if the problem continues, the front desk can book on the patient's behalf from the staff portal."
+  },
+  {
+    "question": "As a front-desk clerk: What is the booking procedure if a patient cannot see any open slots for Machakos?",
+    "answer": "Booking is done under Appointments in the app: select the facility, choose the slot, confirm with the patient number, and wait for the SMS confirmation. Front-desk staff can complete the same booking from the staff portal for patients who do not use smartphones. Queries about which service to book belong with the facility team, not the assistant. For anything that needs clinical judgement, direct the patient to an AfyaPlus provider."
+  },
+  {
+    "question": "A patient in Nairobi asks when their laboratory results will appear. What do I tell them?",
+    "answer": "Standard laboratory results are released to the Results tab within 48 hours of collection. If a patient sees Pending review, that means a clinician is handling the release personally and will contact them, so no action is needed from the front desk beyond confirming the contact number is current. As with every workflow, clinical decisions stay with the AfyaPlus clinical team."
+  },
+  {
+    "question": "As a front-desk clerk: What is the booking procedure if a patient cannot see any open slots for Kisumu?",
+    "answer": "Booking is done under Appointments in the app: select the facility, choose the slot, confirm with the patient number, and wait for the SMS confirmation. Front-desk staff can complete the same booking from the staff portal for patients who do not use smartphones. Queries about which service to book belong with the facility team, not the assistant. Clinical questions are always routed to an AfyaPlus provider rather than answered at the desk."
+  },
+  {
+    "question": "From the Kisumu facility team: How does a patient retrieve their lab results in the app?",
+    "answer": "Results appear under Results in the app, normally within 48 hours of sample collection. A result marked Pending review has been flagged by a clinician, who will call the patient before it is released; staff should not read out or interpret pending results. Questions about what a result means always go to the reviewing clinician."
+  },
+  {
+    "question": "A patient moved house and changed numbers. Which details can they edit themselves?",
+    "answer": "Phone numbers and addresses are self-service: Settings, then Profile, then edit and save. The national ID and the health record number are locked in the app; changing those requires a visit to the registration desk with the original documents, where the duty administrator countersigns the change."
+  },
+  {
+    "question": "From the Kiambu facility team: How does a patient check what their insurance covers in AfyaPlus?",
+    "answer": "Under Billing, the Coverage check takes the insurer name and member number and returns the covered services for that plan. If the patient disagrees with the result, log the case under Billing support; disputes are resolved within three working days, and the front desk should not promise a different outcome in the meantime."
+  },
+  {
+    "question": "What is the resolution timeline for billing disputes, and what should staff avoid promising?",
+    "answer": "Raise the dispute under Billing support with the invoice number attached. The resolution window is three working days, and staff should share exactly that timeline without predicting the outcome. Refunds or adjustments only happen after Billing support closes the case."
+  },
+  {
+    "question": "A patient is relocating from Nakuru to another county. What happens to their record?",
+    "answer": "Transfers start with a request in the records module, which the receiving facility administrator approves. The health record number never changes, so once the approval lands, the patient simply appears in the new facility's list with full history intact. For anything that needs clinical judgement, direct the patient to an AfyaPlus provider."
+  },
+  {
+    "question": "From the Kisumu facility team: What is the booking procedure if a patient cannot see any open slots for Kisumu?",
+    "answer": "Booking is done under Appointments in the app: select the facility, choose the slot, confirm with the patient number, and wait for the SMS confirmation. Front-desk staff can complete the same booking from the staff portal for patients who do not use smartphones. Queries about which service to book belong with the facility team, not the assistant. As with every workflow, clinical decisions stay with the AfyaPlus clinical team."
+  },
+  {
+    "question": "What happens when a patient misses an appointment at the Machakos facility?",
+    "answer": "Go to My Appointments, select the missed visit, and choose Reschedule. The window is 14 days from the missed date; after that the system closes the booking and the patient needs a new referral code, which only the reviewing clinician can issue. Front-desk staff cannot override an expired booking."
+  },
+  {
+    "question": "Where does a front-desk clerk in Nairobi direct billing coverage questions?",
+    "answer": "Under Billing, the Coverage check takes the insurer name and member number and returns the covered services for that plan. If the patient disagrees with the result, log the case under Billing support; disputes are resolved within three working days, and the front desk should not promise a different outcome in the meantime."
+  },
+  {
+    "question": "As a front-desk clerk: As a front-desk clerk, how do I complete a new registration end to end?",
+    "answer": "Registration takes three steps: verify identity with the national ID or passport, confirm the phone number via the SMS code, and issue a health record number from the registration module. A new record only becomes active once the duty administrator countersigns, which should happen the same day."
+  },
+  {
+    "question": "As a duty nurse: What is the resolution timeline for billing disputes, and what should staff avoid promising?",
+    "answer": "Raise the dispute under Billing support with the invoice number attached. The resolution window is three working days, and staff should share exactly that timeline without predicting the outcome. Refunds or adjustments only happen after Billing support closes the case."
+  },
+  {
+    "question": "As a duty nurse: What identity details cannot be changed in the app, and where are they changed?",
+    "answer": "Phone numbers and addresses are self-service: Settings, then Profile, then edit and save. The national ID and the health record number are locked in the app; changing those requires a visit to the registration desk with the original documents, where the duty administrator countersigns the change. For anything that needs clinical judgement, direct the patient to an AfyaPlus provider."
+  },
+  {
+    "question": "Why does the staff portal log users out, and what is the correct response?",
+    "answer": "Idle sessions expire at 20 minutes by policy. If sessions are dropping while the clerk is actively working, note the exact times and the terminal identifier and raise a support ticket, since that pattern points to a connectivity or terminal issue rather than the timeout policy."
+  },
+  {
+    "question": "A patient is relocating from Kiambu to another county. What happens to their record?",
+    "answer": "Raise a transfer request in the records module at the sending facility. The receiving facility's administrator must approve the request before the record moves, and the patient keeps the same health record number throughout, so nothing needs re-registering at the new facility."
+  },
+  {
+    "question": "As a front-desk clerk: How are dispensary stock queries logged, and who gets alerted?",
+    "answer": "Log a stock query from the item card under Dispensary. That alerts the county supply coordinator automatically, and the item card shows the expected restock date, which is what the patient should be told. Questions about substituting a different item are clinical decisions and go back to the prescriber, never to the desk. As with every workflow, clinical decisions stay with the AfyaPlus clinical team."
+  },
+  {
+    "question": "How does a patient book a follow-up with the same clinician?",
+    "answer": "Open the completed visit under My Appointments and tap Book follow-up. The system offers the same clinician's next available slots where possible, falling back to the facility's general list if that clinician has no availability inside the booking window."
+  },
+  {
+    "question": "As a front-desk clerk: How is a patient record transferred between AfyaPlus facilities?",
+    "answer": "Raise a transfer request in the records module at the sending facility. The receiving facility's administrator must approve the request before the record moves, and the patient keeps the same health record number throughout, so nothing needs re-registering at the new facility. Clinical questions are always routed to an AfyaPlus provider rather than answered at the desk."
+  },
+  {
+    "question": "As a community health worker: A prescribed item shows out of stock at the Nairobi dispensary. What does staff do?",
+    "answer": "Log a stock query from the item card under Dispensary. That alerts the county supply coordinator automatically, and the item card shows the expected restock date, which is what the patient should be told. Questions about substituting a different item are clinical decisions and go back to the prescriber, never to the desk. Clinical questions are always routed to an AfyaPlus provider rather than answered at the desk."
+  },
+  {
+    "question": "As a duty nurse: How does a patient retrieve their lab results in the app?",
+    "answer": "Standard laboratory results are released to the Results tab within 48 hours of collection. If a patient sees Pending review, that means a clinician is handling the release personally and will contact them, so no action is needed from the front desk beyond confirming the contact number is current."
+  },
+  {
+    "question": "From the Nakuru facility team: How is a patient record transferred between AfyaPlus facilities?",
+    "answer": "Transfers start with a request in the records module, which the receiving facility administrator approves. The health record number never changes, so once the approval lands, the patient simply appears in the new facility's list with full history intact. For anything that needs clinical judgement, direct the patient to an AfyaPlus provider."
+  },
+  {
+    "question": "From the Kisumu facility team: A patient at the Kisumu facility wants to book a visit on the app. What are the steps?",
+    "answer": "Open the AfyaPlus app and go to Appointments, pick the facility and a time slot, then confirm with the patient number. A confirmation SMS should arrive within about five minutes. If no slots show for the chosen facility, refresh the facility list first, and if the problem continues, the front desk can book on the patient's behalf from the staff portal. Clinical questions are always routed to an AfyaPlus provider rather than answered at the desk."
+  },
+  {
+    "question": "From the Nakuru facility team: Which documents and checks are required before a new patient record goes active?",
+    "answer": "Registration takes three steps: verify identity with the national ID or passport, confirm the phone number via the SMS code, and issue a health record number from the registration module. A new record only becomes active once the duty administrator countersigns, which should happen the same day. As with every workflow, clinical decisions stay with the AfyaPlus clinical team."
+  },
+  {
+    "question": "As a front-desk clerk: A clerk in Nakuru keeps losing their portal session mid-task. What should they check?",
+    "answer": "Idle sessions expire at 20 minutes by policy. If sessions are dropping while the clerk is actively working, note the exact times and the terminal identifier and raise a support ticket, since that pattern points to a connectivity or terminal issue rather than the timeout policy."
+  },
+  {
+    "question": "From the Mombasa facility team: What happens when a patient misses an appointment at the Mombasa facility?",
+    "answer": "Go to My Appointments, select the missed visit, and choose Reschedule. The window is 14 days from the missed date; after that the system closes the booking and the patient needs a new referral code, which only the reviewing clinician can issue. Front-desk staff cannot override an expired booking. For anything that needs clinical judgement, direct the patient to an AfyaPlus provider."
+  },
+  {
+    "question": "As a community health worker: As a front-desk clerk in Mombasa, how should I guide a patient through app booking?",
+    "answer": "Booking is done under Appointments in the app: select the facility, choose the slot, confirm with the patient number, and wait for the SMS confirmation. Front-desk staff can complete the same booking from the staff portal for patients who do not use smartphones. Queries about which service to book belong with the facility team, not the assistant. As with every workflow, clinical decisions stay with the AfyaPlus clinical team."
+  },
+  {
+    "question": "As a duty nurse: What is the rebooking window for missed appointments, and what happens after it lapses?",
+    "answer": "Go to My Appointments, select the missed visit, and choose Reschedule. The window is 14 days from the missed date; after that the system closes the booking and the patient needs a new referral code, which only the reviewing clinician can issue. Front-desk staff cannot override an expired booking."
+  },
+  {
+    "question": "As a duty nurse: How does a patient book a follow-up with the same clinician?",
+    "answer": "The Book follow-up button on the completed visit is the shortest path: it prioritises the same clinician's calendar and only widens to other clinicians when no slot exists. Booking a fresh appointment from scratch loses that continuity, so steer patients to the follow-up route."
+  },
+  {
+    "question": "As a community health worker: How does a patient book a follow-up with the same clinician?",
+    "answer": "Open the completed visit under My Appointments and tap Book follow-up. The system offers the same clinician's next available slots where possible, falling back to the facility's general list if that clinician has no availability inside the booking window. As with every workflow, clinical decisions stay with the AfyaPlus clinical team."
+  },
+  {
+    "question": "From the Mombasa facility team: What identity details cannot be changed in the app, and where are they changed?",
+    "answer": "Patients can edit their own phone number and address under Settings and Profile. Identity fields, meaning the national ID and health record number, cannot be edited in the app at all and must be handled at the registration desk with original documents present. As with every workflow, clinical decisions stay with the AfyaPlus clinical team."
+  },
+  {
+    "question": "As a community health worker: A patient in Machakos asks when their laboratory results will appear. What do I tell them?",
+    "answer": "Results appear under Results in the app, normally within 48 hours of sample collection. A result marked Pending review has been flagged by a clinician, who will call the patient before it is released; staff should not read out or interpret pending results. Questions about what a result means always go to the reviewing clinician."
+  },
+  {
+    "question": "From the Mombasa facility team: Which dependant details can a guardian edit, and which cannot be changed in the app?",
+    "answer": "Under Family, a guardian can book appointments for a dependant and keep their contact details current. The one field that stays locked is the national identifier, which follows the same registration-desk process as any identity change. As with every workflow, clinical decisions stay with the AfyaPlus clinical team."
+  },
+  {
+    "question": "As a community health worker: What are the steps when a colleague in Kiambu cannot log in to the staff portal?",
+    "answer": "The procedure is: confirm identity against the duty roster, open a lockout ticket in the admin console, and wait for the facility administrator to reset the credentials. No one else can perform the reset, and credentials are never shared between staff, whatever the urgency. For anything that needs clinical judgement, direct the patient to an AfyaPlus provider."
+  },
+  {
+    "question": "As a duty nurse: Where can a patient see their active referral codes in the app?",
+    "answer": "Referral codes are issued by the reviewing clinician after a consultation and appear under Referrals in the app, valid for 30 days each. An expired code cannot be renewed by the front desk or in the app; the patient books a follow-up consultation and the clinician issues a new one. For anything that needs clinical judgement, direct the patient to an AfyaPlus provider."
+  },
+  {
+    "question": "As a front-desk clerk: What happens when a patient misses an appointment at the Mombasa facility?",
+    "answer": "Go to My Appointments, select the missed visit, and choose Reschedule. The window is 14 days from the missed date; after that the system closes the booking and the patient needs a new referral code, which only the reviewing clinician can issue. Front-desk staff cannot override an expired booking. Clinical questions are always routed to an AfyaPlus provider rather than answered at the desk."
+  },
+  {
+    "question": "As a duty nurse in Machakos, when and how do I log a queue escalation?",
+    "answer": "The threshold is 30 minutes past the allocated triage slot. At that point the staff member logs the case under Queue Escalation, tags the duty nurse practitioner, and notes the patient's status in the log. The escalation board is reviewed every 15 minutes, so a properly logged case is picked up quickly. As with every workflow, clinical decisions stay with the AfyaPlus clinical team."
+  },
+  {
+    "question": "As a duty nurse: How does a patient reset a forgotten portal password?",
+    "answer": "Use Forgot Password on the login screen; the reset code goes to the registered phone number and expires after 15 minutes. If the code does not arrive, confirm the number on record is current, ask the patient to check signal and retry once, and only then raise a support ticket from the staff portal. For anything that needs clinical judgement, direct the patient to an AfyaPlus provider."
+  },
+  {
+    "question": "A patient disputes what the coverage check showed. What is the process and timeline?",
+    "answer": "Under Billing, the Coverage check takes the insurer name and member number and returns the covered services for that plan. If the patient disagrees with the result, log the case under Billing support; disputes are resolved within three working days, and the front desk should not promise a different outcome in the meantime."
+  },
+  {
+    "question": "From the Kisumu facility team: How are dispensary stock queries logged, and who gets alerted?",
+    "answer": "Staff open the item under Dispensary and log a stock query, which notifies the county supply coordinator. The expected restock date on the item card is the information to share with the patient. Any change to what was prescribed is for the prescriber to decide, not dispensary or front-desk staff. As with every workflow, clinical decisions stay with the AfyaPlus clinical team."
+  },
+  {
+    "question": "What is the booking procedure if a patient cannot see any open slots for Machakos?",
+    "answer": "Booking is done under Appointments in the app: select the facility, choose the slot, confirm with the patient number, and wait for the SMS confirmation. Front-desk staff can complete the same booking from the staff portal for patients who do not use smartphones. Queries about which service to book belong with the facility team, not the assistant."
+  },
+  {
+    "question": "A clerk in Nakuru keeps losing their portal session mid-task. What should they check?",
+    "answer": "Idle sessions expire at 20 minutes by policy. If sessions are dropping while the clerk is actively working, note the exact times and the terminal identifier and raise a support ticket, since that pattern points to a connectivity or terminal issue rather than the timeout policy. For anything that needs clinical judgement, direct the patient to an AfyaPlus provider."
+  },
+  {
+    "question": "As a front-desk clerk: A staff member is locked out of the AfyaPlus system. What is the recovery procedure?",
+    "answer": "Verify the staff member's identity against the duty roster, then raise a lockout ticket in the admin console. Only the facility administrator can reset credentials. Sharing another person's login as a workaround is a violation of the AfyaPlus access policy and must never happen, even under time pressure. Clinical questions are always routed to an AfyaPlus provider rather than answered at the desk."
+  },
+  {
+    "question": "As a duty nurse: A patient in Nairobi asks when their laboratory results will appear. What do I tell them?",
+    "answer": "Standard laboratory results are released to the Results tab within 48 hours of collection. If a patient sees Pending review, that means a clinician is handling the release personally and will contact them, so no action is needed from the front desk beyond confirming the contact number is current."
+  },
+  {
+    "question": "As a community health worker: How does a patient reset a forgotten portal password?",
+    "answer": "Use Forgot Password on the login screen; the reset code goes to the registered phone number and expires after 15 minutes. If the code does not arrive, confirm the number on record is current, ask the patient to check signal and retry once, and only then raise a support ticket from the staff portal. For anything that needs clinical judgement, direct the patient to an AfyaPlus provider."
+  },
+  {
+    "question": "From the Mombasa facility team: How does a patient retrieve their lab results in the app?",
+    "answer": "Standard laboratory results are released to the Results tab within 48 hours of collection. If a patient sees Pending review, that means a clinician is handling the release personally and will contact them, so no action is needed from the front desk beyond confirming the contact number is current. Clinical questions are always routed to an AfyaPlus provider rather than answered at the desk."
+  },
+  {
+    "question": "As a community health worker: Where does a front-desk clerk in Mombasa direct billing coverage questions?",
+    "answer": "The self-service route is Billing, then Coverage check, entering the insurer and member number. Disputes go to Billing support with the invoice or case reference and are handled within three working days. Coverage questions the tool cannot answer belong with the insurer, not with facility staff guessing. For anything that needs clinical judgement, direct the patient to an AfyaPlus provider."
+  },
+  {
+    "question": "As a duty nurse: A clerk in Machakos keeps losing their portal session mid-task. What should they check?",
+    "answer": "The staff portal ends idle sessions after 20 minutes as a data-protection measure, and unsaved work in open forms is discarded. The correct habit is saving drafts before stepping away; repeated unexpected logouts on an active session should be raised as a support ticket with the time and terminal noted."
+  },
+  {
+    "question": "As a front-desk clerk: A patient in Nairobi asks when their laboratory results will appear. What do I tell them?",
+    "answer": "Standard laboratory results are released to the Results tab within 48 hours of collection. If a patient sees Pending review, that means a clinician is handling the release personally and will contact them, so no action is needed from the front desk beyond confirming the contact number is current."
+  },
+  {
+    "question": "As a community health worker: Who can reset staff credentials after a lockout, and what must never be done instead?",
+    "answer": "The procedure is: confirm identity against the duty roster, open a lockout ticket in the admin console, and wait for the facility administrator to reset the credentials. No one else can perform the reset, and credentials are never shared between staff, whatever the urgency. Clinical questions are always routed to an AfyaPlus provider rather than answered at the desk."
+  },
+  {
+    "question": "As a duty nurse: A clerk in Kisumu keeps losing their portal session mid-task. What should they check?",
+    "answer": "Idle sessions expire at 20 minutes by policy. If sessions are dropping while the clerk is actively working, note the exact times and the terminal identifier and raise a support ticket, since that pattern points to a connectivity or terminal issue rather than the timeout policy. For anything that needs clinical judgement, direct the patient to an AfyaPlus provider."
+  },
+  {
+    "question": "From the Mombasa facility team: A staff member is locked out of the AfyaPlus system. What is the recovery procedure?",
+    "answer": "Verify the staff member's identity against the duty roster, then raise a lockout ticket in the admin console. Only the facility administrator can reset credentials. Sharing another person's login as a workaround is a violation of the AfyaPlus access policy and must never happen, even under time pressure. Clinical questions are always routed to an AfyaPlus provider rather than answered at the desk."
+  },
+  {
+    "question": "From the Nairobi facility team: A patient's referral code expired. Can the front desk renew it?",
+    "answer": "Active codes are listed under Referrals, each with a 30-day validity from issue. Only the reviewing clinician can issue or reissue a code, so once one expires, the correct route is a follow-up consultation rather than a front-desk request. Clinical questions are always routed to an AfyaPlus provider rather than answered at the desk."
+  },
+  {
+    "question": "As a front-desk clerk: A patient moved house and changed numbers. Which details can they edit themselves?",
+    "answer": "Phone numbers and addresses are self-service: Settings, then Profile, then edit and save. The national ID and the health record number are locked in the app; changing those requires a visit to the registration desk with the original documents, where the duty administrator countersigns the change."
+  },
+  {
+    "question": "As a community health worker: What is the booking procedure if a patient cannot see any open slots for Kisumu?",
+    "answer": "Booking is done under Appointments in the app: select the facility, choose the slot, confirm with the patient number, and wait for the SMS confirmation. Front-desk staff can complete the same booking from the staff portal for patients who do not use smartphones. Queries about which service to book belong with the facility team, not the assistant."
+  },
+  {
+    "question": "As a duty nurse: What happens when a patient misses an appointment at the Nakuru facility?",
+    "answer": "Go to My Appointments, select the missed visit, and choose Reschedule. The window is 14 days from the missed date; after that the system closes the booking and the patient needs a new referral code, which only the reviewing clinician can issue. Front-desk staff cannot override an expired booking."
+  },
+  {
+    "question": "As a duty nurse: What does the 'Pending review' status on a result mean, operationally?",
+    "answer": "Results appear under Results in the app, normally within 48 hours of sample collection. A result marked Pending review has been flagged by a clinician, who will call the patient before it is released; staff should not read out or interpret pending results. Questions about what a result means always go to the reviewing clinician. For anything that needs clinical judgement, direct the patient to an AfyaPlus provider."
+  },
+  {
+    "question": "From the Kiambu facility team: A patient's referral code expired. Can the front desk renew it?",
+    "answer": "Active codes are listed under Referrals, each with a 30-day validity from issue. Only the reviewing clinician can issue or reissue a code, so once one expires, the correct route is a follow-up consultation rather than a front-desk request. For anything that needs clinical judgement, direct the patient to an AfyaPlus provider."
+  },
+  {
+    "question": "As a front-desk clerk: Which documents and checks are required before a new patient record goes active?",
+    "answer": "Registration takes three steps: verify identity with the national ID or passport, confirm the phone number via the SMS code, and issue a health record number from the registration module. A new record only becomes active once the duty administrator countersigns, which should happen the same day."
+  },
+  {
+    "question": "As a duty nurse: Which documents and checks are required before a new patient record goes active?",
+    "answer": "Registration takes three steps: verify identity with the national ID or passport, confirm the phone number via the SMS code, and issue a health record number from the registration module. A new record only becomes active once the duty administrator countersigns, which should happen the same day."
+  },
+  {
+    "question": "As a front-desk clerk: A prescribed item shows out of stock at the Nakuru dispensary. What does staff do?",
+    "answer": "Staff open the item under Dispensary and log a stock query, which notifies the county supply coordinator. The expected restock date on the item card is the information to share with the patient. Any change to what was prescribed is for the prescriber to decide, not dispensary or front-desk staff."
+  },
+  {
+    "question": "From the Machakos facility team: A prescribed item shows out of stock at the Machakos dispensary. What does staff do?",
+    "answer": "Staff open the item under Dispensary and log a stock query, which notifies the county supply coordinator. The expected restock date on the item card is the information to share with the patient. Any change to what was prescribed is for the prescriber to decide, not dispensary or front-desk staff."
+  },
+  {
+    "question": "As a front-desk clerk: A clerk in Machakos keeps losing their portal session mid-task. What should they check?",
+    "answer": "The staff portal ends idle sessions after 20 minutes as a data-protection measure, and unsaved work in open forms is discarded. The correct habit is saving drafts before stepping away; repeated unexpected logouts on an active session should be raised as a support ticket with the time and terminal noted."
+  },
+  {
+    "question": "From the Kiambu facility team: Who can reset staff credentials after a lockout, and what must never be done instead?",
+    "answer": "The procedure is: confirm identity against the duty roster, open a lockout ticket in the admin console, and wait for the facility administrator to reset the credentials. No one else can perform the reset, and credentials are never shared between staff, whatever the urgency."
+  },
+  {
+    "question": "As a front-desk clerk: Where can a patient see their active referral codes in the app?",
+    "answer": "Active codes are listed under Referrals, each with a 30-day validity from issue. Only the reviewing clinician can issue or reissue a code, so once one expires, the correct route is a follow-up consultation rather than a front-desk request. For anything that needs clinical judgement, direct the patient to an AfyaPlus provider."
+  },
+  {
+    "question": "As a duty nurse: Who can reset staff credentials after a lockout, and what must never be done instead?",
+    "answer": "The procedure is: confirm identity against the duty roster, open a lockout ticket in the admin console, and wait for the facility administrator to reset the credentials. No one else can perform the reset, and credentials are never shared between staff, whatever the urgency."
+  },
+  {
+    "question": "From the Nairobi facility team: What should the patient be told when an item is out of stock?",
+    "answer": "Staff open the item under Dispensary and log a stock query, which notifies the county supply coordinator. The expected restock date on the item card is the information to share with the patient. Any change to what was prescribed is for the prescriber to decide, not dispensary or front-desk staff. For anything that needs clinical judgement, direct the patient to an AfyaPlus provider."
+  },
+  {
+    "question": "As a duty nurse: How are dispensary stock queries logged, and who gets alerted?",
+    "answer": "Log a stock query from the item card under Dispensary. That alerts the county supply coordinator automatically, and the item card shows the expected restock date, which is what the patient should be told. Questions about substituting a different item are clinical decisions and go back to the prescriber, never to the desk. Clinical questions are always routed to an AfyaPlus provider rather than answered at the desk."
+  },
+  {
+    "question": "As a duty nurse: What is the booking procedure if a patient cannot see any open slots for Nairobi?",
+    "answer": "Open the AfyaPlus app and go to Appointments, pick the facility and a time slot, then confirm with the patient number. A confirmation SMS should arrive within about five minutes. If no slots show for the chosen facility, refresh the facility list first, and if the problem continues, the front desk can book on the patient's behalf from the staff portal. For anything that needs clinical judgement, direct the patient to an AfyaPlus provider."
+  },
+  {
+    "question": "As a duty nurse in Mombasa, when and how do I log a queue escalation?",
+    "answer": "The threshold is 30 minutes past the allocated triage slot. At that point the staff member logs the case under Queue Escalation, tags the duty nurse practitioner, and notes the patient's status in the log. The escalation board is reviewed every 15 minutes, so a properly logged case is picked up quickly."
+  },
+  {
+    "question": "From the Mombasa facility team: Which documents and checks are required before a new patient record goes active?",
+    "answer": "Collect the national identifier or passport, verify the phone number with the SMS code, and assign a health record number from the registration module. The record stays inactive until the duty administrator countersigns it, so hand it over for countersigning before the patient leaves the desk. As with every workflow, clinical decisions stay with the AfyaPlus clinical team."
+  },
+  {
+    "question": "From the Nairobi facility team: What identity details cannot be changed in the app, and where are they changed?",
+    "answer": "Patients can edit their own phone number and address under Settings and Profile. Identity fields, meaning the national ID and health record number, cannot be edited in the app at all and must be handled at the registration desk with original documents present. Clinical questions are always routed to an AfyaPlus provider rather than answered at the desk."
+  },
+  {
+    "question": "As a front-desk clerk: How does a patient obtain a referral code, and how long does it stay valid?",
+    "answer": "Referral codes are issued by the reviewing clinician after a consultation and appear under Referrals in the app, valid for 30 days each. An expired code cannot be renewed by the front desk or in the app; the patient books a follow-up consultation and the clinician issues a new one. Clinical questions are always routed to an AfyaPlus provider rather than answered at the desk."
+  },
+  {
+    "question": "Where does a front-desk clerk in Nakuru direct billing coverage questions?",
+    "answer": "The self-service route is Billing, then Coverage check, entering the insurer and member number. Disputes go to Billing support with the invoice or case reference and are handled within three working days. Coverage questions the tool cannot answer belong with the insurer, not with facility staff guessing. Clinical questions are always routed to an AfyaPlus provider rather than answered at the desk."
+  },
+  {
+    "question": "What are the steps when a colleague in Kisumu cannot log in to the staff portal?",
+    "answer": "The procedure is: confirm identity against the duty roster, open a lockout ticket in the admin console, and wait for the facility administrator to reset the credentials. No one else can perform the reset, and credentials are never shared between staff, whatever the urgency."
+  },
+  {
+    "question": "What are the steps when a colleague in Machakos cannot log in to the staff portal?",
+    "answer": "Verify the staff member's identity against the duty roster, then raise a lockout ticket in the admin console. Only the facility administrator can reset credentials. Sharing another person's login as a workaround is a violation of the AfyaPlus access policy and must never happen, even under time pressure. Clinical questions are always routed to an AfyaPlus provider rather than answered at the desk."
+  },
+  {
+    "question": "As a duty nurse: What happens when a patient misses an appointment at the Nairobi facility?",
+    "answer": "A missed appointment can be rebooked within 14 days at no penalty: the patient opens My Appointments, selects the missed visit, and taps Reschedule. Once the 14 days lapse, the booking expires and a new referral code is needed from the reviewing clinician before a fresh appointment can be made."
+  },
+  {
+    "question": "A patient at the Kiambu facility wants to book a visit on the app. What are the steps?",
+    "answer": "Booking is done under Appointments in the app: select the facility, choose the slot, confirm with the patient number, and wait for the SMS confirmation. Front-desk staff can complete the same booking from the staff portal for patients who do not use smartphones. Queries about which service to book belong with the facility team, not the assistant."
+  },
+  {
+    "question": "As a duty nurse: What is the booking procedure if a patient cannot see any open slots for Machakos?",
+    "answer": "Open the AfyaPlus app and go to Appointments, pick the facility and a time slot, then confirm with the patient number. A confirmation SMS should arrive within about five minutes. If no slots show for the chosen facility, refresh the facility list first, and if the problem continues, the front desk can book on the patient's behalf from the staff portal. As with every workflow, clinical decisions stay with the AfyaPlus clinical team."
+  },
+  {
+    "question": "From the Nairobi facility team: What are the steps to register a new patient at the Nairobi facility?",
+    "answer": "Collect the national identifier or passport, verify the phone number with the SMS code, and assign a health record number from the registration module. The record stays inactive until the duty administrator countersigns it, so hand it over for countersigning before the patient leaves the desk. Clinical questions are always routed to an AfyaPlus provider rather than answered at the desk."
+  },
+  {
+    "question": "As a duty nurse: A patient at the Machakos facility wants to book a visit on the app. What are the steps?",
+    "answer": "Booking is done under Appointments in the app: select the facility, choose the slot, confirm with the patient number, and wait for the SMS confirmation. Front-desk staff can complete the same booking from the staff portal for patients who do not use smartphones. Queries about which service to book belong with the facility team, not the assistant."
+  },
+  {
+    "question": "As a duty nurse: What are the steps to register a new patient at the Kisumu facility?",
+    "answer": "Collect the national identifier or passport, verify the phone number with the SMS code, and assign a health record number from the registration module. The record stays inactive until the duty administrator countersigns it, so hand it over for countersigning before the patient leaves the desk. For anything that needs clinical judgement, direct the patient to an AfyaPlus provider."
+  },
+  {
+    "question": "As a front-desk clerk: How does a patient reset a forgotten portal password?",
+    "answer": "The self-service flow is Forgot Password, with a 15-minute code sent to the registered number. When the code fails to arrive, verify the registered number first, since an outdated number is the usual cause, and raise a support ticket only after one retry on a confirmed number. For anything that needs clinical judgement, direct the patient to an AfyaPlus provider."
+  },
+  {
+    "question": "As a front-desk clerk: A patient believes an invoice is wrong. How is a billing dispute raised?",
+    "answer": "The route is Billing support, quoting the invoice number. Cases close within three working days, and until then no one at the facility should promise a refund, an adjustment, or a specific outcome, since only the billing team can make that call. Clinical questions are always routed to an AfyaPlus provider rather than answered at the desk."
+  },
+  {
+    "question": "As a duty nurse: How often are queue escalations reviewed, and what must be recorded with each one?",
+    "answer": "The threshold is 30 minutes past the allocated triage slot. At that point the staff member logs the case under Queue Escalation, tags the duty nurse practitioner, and notes the patient's status in the log. The escalation board is reviewed every 15 minutes, so a properly logged case is picked up quickly."
+  },
+  {
+    "question": "As a community health worker: What does the 'Pending review' status on a result mean, operationally?",
+    "answer": "Standard laboratory results are released to the Results tab within 48 hours of collection. If a patient sees Pending review, that means a clinician is handling the release personally and will contact them, so no action is needed from the front desk beyond confirming the contact number is current. As with every workflow, clinical decisions stay with the AfyaPlus clinical team."
+  },
+  {
+    "question": "From the Kisumu facility team: A clerk in Kisumu keeps losing their portal session mid-task. What should they check?",
+    "answer": "The staff portal ends idle sessions after 20 minutes as a data-protection measure, and unsaved work in open forms is discarded. The correct habit is saving drafts before stepping away; repeated unexpected logouts on an active session should be raised as a support ticket with the time and terminal noted."
+  },
+  {
+    "question": "From the Nakuru facility team: As a front-desk clerk, how do I complete a new registration end to end?",
+    "answer": "Collect the national identifier or passport, verify the phone number with the SMS code, and assign a health record number from the registration module. The record stays inactive until the duty administrator countersigns it, so hand it over for countersigning before the patient leaves the desk. As with every workflow, clinical decisions stay with the AfyaPlus clinical team."
+  },
+  {
+    "question": "As a community health worker: A patient believes an invoice is wrong. How is a billing dispute raised?",
+    "answer": "The route is Billing support, quoting the invoice number. Cases close within three working days, and until then no one at the facility should promise a refund, an adjustment, or a specific outcome, since only the billing team can make that call."
+  },
+  {
+    "question": "As a duty nurse: How does a guardian manage a dependant's profile in AfyaPlus?",
+    "answer": "Guardians manage dependants under the Family section: contact details, appointment bookings, and reminders are all editable there. The dependant's national identifier is locked, exactly like an adult's, and can only be corrected at the registration desk with original documents."
+  },
+  {
+    "question": "What is the booking procedure if a patient cannot see any open slots for Kisumu?",
+    "answer": "Open the AfyaPlus app and go to Appointments, pick the facility and a time slot, then confirm with the patient number. A confirmation SMS should arrive within about five minutes. If no slots show for the chosen facility, refresh the facility list first, and if the problem continues, the front desk can book on the patient's behalf from the staff portal. As with every workflow, clinical decisions stay with the AfyaPlus clinical team."
+  },
+  {
+    "question": "As a community health worker: What is the fastest route to a follow-up consultation after a completed visit?",
+    "answer": "The Book follow-up button on the completed visit is the shortest path: it prioritises the same clinician's calendar and only widens to other clinicians when no slot exists. Booking a fresh appointment from scratch loses that continuity, so steer patients to the follow-up route."
+  },
+  {
+    "question": "A patient in Machakos asks when their laboratory results will appear. What do I tell them?",
+    "answer": "Standard laboratory results are released to the Results tab within 48 hours of collection. If a patient sees Pending review, that means a clinician is handling the release personally and will contact them, so no action is needed from the front desk beyond confirming the contact number is current. As with every workflow, clinical decisions stay with the AfyaPlus clinical team."
+  },
+  {
+    "question": "A clerk in Nairobi keeps losing their portal session mid-task. What should they check?",
+    "answer": "The staff portal ends idle sessions after 20 minutes as a data-protection measure, and unsaved work in open forms is discarded. The correct habit is saving drafts before stepping away; repeated unexpected logouts on an active session should be raised as a support ticket with the time and terminal noted."
+  },
+  {
+    "question": "As a front-desk clerk in Mombasa, how should I guide a patient through app booking?",
+    "answer": "Open the AfyaPlus app and go to Appointments, pick the facility and a time slot, then confirm with the patient number. A confirmation SMS should arrive within about five minutes. If no slots show for the chosen facility, refresh the facility list first, and if the problem continues, the front desk can book on the patient's behalf from the staff portal. For anything that needs clinical judgement, direct the patient to an AfyaPlus provider."
+  },
+  {
+    "question": "What are the steps to register a new patient at the Nairobi facility?",
+    "answer": "Registration takes three steps: verify identity with the national ID or passport, confirm the phone number via the SMS code, and issue a health record number from the registration module. A new record only becomes active once the duty administrator countersigns, which should happen the same day."
+  },
+  {
+    "question": "As a duty nurse: A patient is relocating from Kiambu to another county. What happens to their record?",
+    "answer": "Raise a transfer request in the records module at the sending facility. The receiving facility's administrator must approve the request before the record moves, and the patient keeps the same health record number throughout, so nothing needs re-registering at the new facility."
+  },
+  {
+    "question": "As a community health worker: A prescribed item shows out of stock at the Kisumu dispensary. What does staff do?",
+    "answer": "Log a stock query from the item card under Dispensary. That alerts the county supply coordinator automatically, and the item card shows the expected restock date, which is what the patient should be told. Questions about substituting a different item are clinical decisions and go back to the prescriber, never to the desk. Clinical questions are always routed to an AfyaPlus provider rather than answered at the desk."
+  },
+  {
+    "question": "A patient at the Nakuru facility wants to book a visit on the app. What are the steps?",
+    "answer": "Booking is done under Appointments in the app: select the facility, choose the slot, confirm with the patient number, and wait for the SMS confirmation. Front-desk staff can complete the same booking from the staff portal for patients who do not use smartphones. Queries about which service to book belong with the facility team, not the assistant."
+  },
+  {
+    "question": "As a community health worker: Why does the staff portal log users out, and what is the correct response?",
+    "answer": "Idle sessions expire at 20 minutes by policy. If sessions are dropping while the clerk is actively working, note the exact times and the terminal identifier and raise a support ticket, since that pattern points to a connectivity or terminal issue rather than the timeout policy."
+  },
+  {
+    "question": "A prescribed item shows out of stock at the Machakos dispensary. What does staff do?",
+    "answer": "Log a stock query from the item card under Dispensary. That alerts the county supply coordinator automatically, and the item card shows the expected restock date, which is what the patient should be told. Questions about substituting a different item are clinical decisions and go back to the prescriber, never to the desk. As with every workflow, clinical decisions stay with the AfyaPlus clinical team."
+  },
+  {
+    "question": "As a community health worker: Where does a front-desk clerk in Kisumu direct billing coverage questions?",
+    "answer": "The self-service route is Billing, then Coverage check, entering the insurer and member number. Disputes go to Billing support with the invoice or case reference and are handled within three working days. Coverage questions the tool cannot answer belong with the insurer, not with facility staff guessing. For anything that needs clinical judgement, direct the patient to an AfyaPlus provider."
+  },
+  {
+    "question": "As a duty nurse: How is a patient record transferred between AfyaPlus facilities?",
+    "answer": "Transfers start with a request in the records module, which the receiving facility administrator approves. The health record number never changes, so once the approval lands, the patient simply appears in the new facility's list with full history intact."
+  },
+  {
+    "question": "As a duty nurse: A clerk in Nakuru keeps losing their portal session mid-task. What should they check?",
+    "answer": "The staff portal ends idle sessions after 20 minutes as a data-protection measure, and unsaved work in open forms is discarded. The correct habit is saving drafts before stepping away; repeated unexpected logouts on an active session should be raised as a support ticket with the time and terminal noted. As with every workflow, clinical decisions stay with the AfyaPlus clinical team."
+  },
+  {
+    "question": "As a community health worker: As a duty nurse in Machakos, when and how do I log a queue escalation?",
+    "answer": "If a patient has waited more than 30 minutes past their triage slot, log the delay under Queue Escalation in the staff portal, tag the duty nurse practitioner, and record the patient's current status. Escalations are reviewed every 15 minutes. This is a scheduling and routing procedure; any clinical assessment stays with the clinical team. Clinical questions are always routed to an AfyaPlus provider rather than answered at the desk."
+  },
+  {
+    "question": "As a duty nurse: How do I update a patient's phone number in AfyaPlus?",
+    "answer": "Phone numbers and addresses are self-service: Settings, then Profile, then edit and save. The national ID and the health record number are locked in the app; changing those requires a visit to the registration desk with the original documents, where the duty administrator countersigns the change. As with every workflow, clinical decisions stay with the AfyaPlus clinical team."
+  }
+]

@@ -1,0 +1,18 @@
+# Secrets
+.env
+
+# Environments and caches
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# Large model artefacts (16GB merged model, optimiser-state checkpoints)
+afyaplus-llama-merged/
+afyaplus-llama-adapter/checkpoint-*/
+*.tar.gz
+*.zip
+
+# Judge cache is reproducible from responses.jsonl
+outputs/judge_cache.jsonl
+outputs/_mock_cache.jsonl
