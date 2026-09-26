@@ -28,7 +28,7 @@ Note the **$/hr** on the offer card; you need it for the cost figure. Rent the i
 tmux new -s capstone
 
 cd /workspace 2>/dev/null || cd ~
-git clone https://github.com/<you>/<repo>.git afyaplus-llama-finetune
+git clone https://github.com/danieloselu3/afyaplus-llama-finetune.git afyaplus-llama-finetune
 # (or from your laptop: scp -P <port> -r afyaplus-llama-finetune root@<host>:/workspace/)
 cd afyaplus-llama-finetune
 
