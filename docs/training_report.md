@@ -4,7 +4,7 @@
 
 | Item | Value |
 |---|---|
-| Base model | `meta-llama/Meta-Llama-3.1-8B-Instruct` |
+| Base model | `meta-llama/Meta-Llama-3-8B-Instruct` |
 | Method | QLoRA: 4-bit NF4 base with double quantisation, plus LoRA adapters |
 | Compute | vast.ai, 1 x _GPU (pending run)_, _$/hr (pending)_ |
 | Libraries | transformers 4.44.2, trl 0.9.6, peft 0.12.0, bitsandbytes 0.49.2 (see "Deviations from the course lab") |
@@ -29,14 +29,15 @@
 | `logging_steps` / `eval_steps` / `save_steps` | 2 / 5 / 5 | Gives 15 training and 6 validation points on a 30-step run. The course's 10/10/10 gives only 3 of each, too few to diagnose a curve. |
 | `load_best_model_at_end` | True (by `eval_loss`) | The saved adapter is always the checkpoint that generalised best. |
 | Loss masking | Answer tokens only | About 40% of each example is the same system prompt. Masking it means the loss measures how well the model learned the answers, not the prompt. |
-| Padding token | `<|finetune_right_pad_id|>` | Padding with `eos` (as in the course lab) would also mask the real end-of-turn token, and the model would never learn to stop. |
-| Precision | bf16 (fp16 fallback) | bf16 is LLaMA 3.1's native dtype. The course's V100 has no bf16 support, so `bf16=True` would fail there. |
+| Padding token | `<|reserved_special_token_250|>` | Padding with `eos` (as in the course lab) would also mask the real end-of-turn token, and the model would never learn to stop. LLaMA 3 has no dedicated pad token, so an unused reserved token is used; padded positions are excluded from attention and loss. |
+| Precision | bf16 (fp16 fallback) | bf16 is LLaMA 3's native dtype. The course's V100 has no bf16 support, so `bf16=True` would fail there. |
 
 ## Deviations from the course lab
 
-1. **Library versions.** transformers 4.41.2 cannot parse LLaMA 3.1's `rope_scaling` config, which needs 4.43 or later, so every pin moved to the nearest compatible set. bitsandbytes is 0.49.2 because the vast.ai PyTorch image ships CUDA 12.8 builds of torch, which 0.43.x has no binary for.
-2. **Compute.** The run used vast.ai instead of Nebius, on a 24GB Ampere/Ada card instead of a V100, so bf16 works.
-3. **Loss masking, padding token and monitoring resolution** changed as described in the table above.
+1. **Base model.** The run uses LLaMA 3 8B Instruct rather than the brief's LLaMA 3.1 8B Instruct. The two share the 8B architecture, tokenizer family and chat format. LLaMA 3's 8K context is far above the 512-token training examples, so nothing in the pipeline depends on 3.1's longer context.
+2. **Library versions.** The vast.ai PyTorch image ships Python 3.12 and CUDA 12.8 builds of torch, so the pins moved to transformers 4.44.2, trl 0.9.6, peft 0.12.0 and bitsandbytes 0.49.2. bitsandbytes 0.43.x has no CUDA 12.8 binary.
+3. **Compute.** The run used vast.ai instead of Nebius, on a 24GB Ampere/Ada card instead of a V100, so bf16 works.
+4. **Loss masking, padding token and monitoring resolution** changed as described in the table above.
 
 ## Loss curve and diagnosis
 

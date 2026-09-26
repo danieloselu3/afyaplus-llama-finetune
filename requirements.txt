@@ -2,9 +2,9 @@
 # image (current templates: Python 3.12, CUDA 12.8 builds of torch); it is
 # deliberately not pinned here so pip does not replace the image's CUDA build.
 #
-# The course pinned transformers==4.41.2 / trl==0.8.6 / peft==0.11.1, but
-# transformers 4.41 cannot load LLaMA 3.1 (its rope_scaling "llama3" config
-# arrived in 4.43). These pins are the nearest mutually compatible set.
+# The course pinned transformers==4.41.2 / trl==0.8.6 / peft==0.11.1. These
+# newer pins run on the image's Python 3.12 + CUDA 12.8 torch and provide the
+# SFTConfig / completion-only-loss API that fine_tune.py uses.
 transformers==4.44.2
 trl==0.9.6
 peft==0.12.0

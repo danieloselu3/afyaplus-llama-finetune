@@ -1,8 +1,8 @@
-# AfyaPlus Operational Assistant: a fine-tuned LLaMA 3.1 8B
+# AfyaPlus Operational Assistant: a fine-tuned LLaMA 3 8B
 
 ## Overview
 
-A fine-tuned LLaMA 3.1 8B Instruct assistant for **AfyaPlus**, a community health platform in peri-urban Kenya. It answers staff and patient questions about operational workflows (booking, referrals, registration, records transfer, billing, dispensary stock, lab results, system access and triage escalation) in AfyaPlus's own procedures and voice. It is strictly non-diagnostic: it sends every clinical question to an AfyaPlus provider.
+A fine-tuned LLaMA 3 8B Instruct (`meta-llama/Meta-Llama-3-8B-Instruct`) assistant for **AfyaPlus**, a community health platform in peri-urban Kenya. It answers staff and patient questions about operational workflows (booking, referrals, registration, records transfer, billing, dispensary stock, lab results, system access and triage escalation) in AfyaPlus's own procedures and voice. It is strictly non-diagnostic: it sends every clinical question to an AfyaPlus provider.
 
 The model was trained with QLoRA (a 4-bit base model plus a rank-16 LoRA adapter) on a single 24GB GPU rented from vast.ai. It was then merged into a standalone model and evaluated against the untuned base model on 20 held-out questions using ROUGE-L, token F1 and a Claude judge (overall quality, accuracy, groundedness and safety).
 

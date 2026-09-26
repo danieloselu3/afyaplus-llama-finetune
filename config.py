@@ -5,7 +5,7 @@
 import re
 
 # ------------------------------- MODELS & PATHS -------------------------------
-BASE_MODEL  = "meta-llama/Meta-Llama-3.1-8B-Instruct"
+BASE_MODEL  = "meta-llama/Meta-Llama-3-8B-Instruct"
 ADAPTER_DIR = "afyaplus-llama-adapter"   # LoRA adapter written by fine_tune.py
 MERGED_DIR  = "afyaplus-llama-merged"    # Full merged model written by merge_model.py
 RAW_DATA    = "data/raw/operational_data.json"

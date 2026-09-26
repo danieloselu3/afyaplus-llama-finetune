@@ -23,7 +23,7 @@ if not os.path.exists(f"{ADAPTER_DIR}/adapter_model.safetensors"):
 
 # STEP 1: Load the base model in 16-bit, NOT 4-bit.
 # Merging into quantised weights bakes rounding error into the result; a
-# one-time 16-bit merge keeps full fidelity. bfloat16 is LLaMA 3.1's native
+# one-time 16-bit merge keeps full fidelity. bfloat16 is LLaMA 3's native
 # dtype and matches the training compute dtype (fp16 on pre-Ampere cards).
 DTYPE = torch.bfloat16 if torch.cuda.is_available() and torch.cuda.is_bf16_supported() else torch.float16
 started = time.time()
@@ -45,7 +45,7 @@ print("Merging adapter weights into base model...")
 model = model.merge_and_unload()
 
 # STEP 4: Save the merged model with the training tokeniser (carries the
-# <|finetune_right_pad_id|> padding setting), so the folder is self-contained.
+# reserved-token padding setting), so the folder is self-contained.
 print(f"Saving merged model to {MERGED_DIR}/ ...")
 model.save_pretrained(MERGED_DIR, safe_serialization=True, max_shard_size="5GB")
 AutoTokenizer.from_pretrained(ADAPTER_DIR).save_pretrained(MERGED_DIR)

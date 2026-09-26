@@ -1,11 +1,11 @@
 # fine_tune.py
 # Runs ON THE VAST.AI GPU INSTANCE (24GB card: RTX 3090 / 4090 / A5000).
-# Loads LLaMA 3.1 8B Instruct in 4-bit (QLoRA), injects LoRA adapters into the
+# Loads LLaMA 3 8B Instruct in 4-bit (QLoRA), injects LoRA adapters into the
 # attention projections, and trains on the AfyaPlus splits from data_prep.py.
 #
-# Library versions: see requirements.txt. The course pinned transformers 4.41.2,
-# which cannot parse LLaMA 3.1's rope_scaling config (support landed in 4.43),
-# so this project uses transformers 4.44.2 / trl 0.9.6 / peft 0.12.0.
+# Library versions: see requirements.txt. transformers 4.44.2 / trl 0.9.6 /
+# peft 0.12.0 run on the vast.ai image's Python 3.12 + CUDA 12.8 torch and
+# provide the SFTConfig API used below.
 import json
 import os
 import platform
@@ -117,10 +117,15 @@ model = prepare_model_for_kbit_training(
 
 # ---------------------------- LOAD TOKENISER -----------------------------
 tokenizer = AutoTokenizer.from_pretrained(BASE_MODEL)
-# Pad with LLaMA 3.1's reserved padding token, NOT eos. The collator masks
-# padding out of the loss; if pad == eos (<|eot_id|>), the real end-of-turn
-# token is masked too and the model never learns when to stop talking.
-tokenizer.pad_token = "<|finetune_right_pad_id|>"
+# Pad with a reserved special token, NOT eos. The collator masks padding out
+# of the loss; if pad == eos (<|eot_id|>), the real end-of-turn token is masked
+# too and the model never learns when to stop talking. LLaMA 3.1 ships a
+# dedicated <|finetune_right_pad_id|>; LLaMA 3 has only the unused
+# <|reserved_special_token_N|> slots, which are safe because padded positions
+# are excluded from both attention and loss.
+PAD_CANDIDATES = ["<|finetune_right_pad_id|>", "<|reserved_special_token_250|>"]
+tokenizer.pad_token = next(t for t in PAD_CANDIDATES if t in tokenizer.get_vocab())
+print(f"Pad token: {tokenizer.pad_token} (id {tokenizer.pad_token_id})")
 tokenizer.padding_side = "right"
 model.config.pad_token_id = tokenizer.pad_token_id
 
@@ -145,7 +150,7 @@ dataset = load_dataset(
 
 
 def apply_chat_template(example):
-    """Render the messages exactly as LLaMA 3.1 Instruct was trained to see
+    """Render the messages exactly as LLaMA 3 Instruct was trained to see
     them. add_generation_prompt=False: the answer is already present. The
     leading <|begin_of_text|> is stripped because the trainer's tokeniser adds
     it again, which would otherwise double it."""

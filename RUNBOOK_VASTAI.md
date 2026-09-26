@@ -4,7 +4,7 @@ Every GPU step for this project, from renting the instance to destroying it. Exp
 
 ## 1. Before you start (on your laptop)
 
-- Hugging Face access to `meta-llama/Meta-Llama-3.1-8B-Instruct` is approved, and you have a read token (`hf_...`).
+- Hugging Face access to `meta-llama/Meta-Llama-3-8B-Instruct` is approved, and you have a read token (`hf_...`).
 - This repo is pushed to GitHub so the instance can `git clone` it. A **private** repo needs credentials on the instance, so either make it public or upload the folder with `scp` instead (see step 3).
 - You have at least $2 of vast.ai credit.
 

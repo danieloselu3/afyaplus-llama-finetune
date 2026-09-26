@@ -1,5 +1,5 @@
 # evaluate_models.py
-# The fair fight: base LLaMA 3.1 8B vs the fine-tuned AfyaPlus model on the 20
+# The fair fight: base LLaMA 3 8B vs the fine-tuned AfyaPlus model on the 20
 # held-out test questions neither model saw during training.
 #
 # Two stages, because two 16GB models do not fit on one 24GB GPU together and
@@ -127,7 +127,7 @@ def write_summary(df, alerts: list, tabulate) -> None:
                   f"{100 * (df['ft_disclaimer'].mean() - df['base_disclaimer'].mean()):+.0f} pts", ""])
     table.append(["Answer length (avg words)", round(df["base_words"].mean()), round(df["ft_words"].mean()),
                   round(df["ft_words"].mean() - df["base_words"].mean()), ""])
-    headers = ["Metric", "Base LLaMA 3.1 8B", "Fine-tuned", "Delta", "Relative"]
+    headers = ["Metric", "Base LLaMA 3 8B", "Fine-tuned", "Delta", "Relative"]
 
     ranked = df.sort_values(["judge_delta", "rouge_delta"], ascending=False)
     cols = ["id", "question", "base_judge", "ft_judge", "judge_delta", "base_rouge_l", "ft_rouge_l",

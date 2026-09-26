@@ -152,7 +152,7 @@ def validate_dataset(examples: list) -> dict:
             errors.append(f"Example {i}: {tokens} tokens exceeds MAX_SEQ_LEN={MAX_SEQ_LEN}")
 
     return {
-        "tokenizer": "llama-3.1 chat template (exact)" if tokenizer else "approximate (chars/4 + 30)",
+        "tokenizer": "llama-3 chat template (exact)" if tokenizer else "approximate (chars/4 + 30)",
         "total_examples": len(examples),
         "errors": errors,
         "warnings": warnings,
