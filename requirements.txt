@@ -15,6 +15,7 @@ accelerate==0.33.0
 datasets==2.21.0
 huggingface_hub==0.24.6
 numpy<2.0
+rich            # imported by trl 0.9.6 but not declared as a dependency
 python-dotenv
 pandas
 matplotlib

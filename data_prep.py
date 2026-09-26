@@ -95,7 +95,8 @@ def _load_llama_tokenizer():
         token = os.getenv("HF_TOKEN")
         return AutoTokenizer.from_pretrained(BASE_MODEL, token=token)
     except Exception as exc:
-        print(f"[WARN] Could not load the LLaMA tokeniser ({type(exc).__name__}).")
+        print(f"[WARN] Could not load the LLaMA tokeniser ({type(exc).__name__}: "
+              f"{str(exc).strip().splitlines()[0][:200] if str(exc).strip() else 'no message'}).")
         print("[WARN] Falling back to an approximate token count (chars / 4).")
         return None
 

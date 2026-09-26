@@ -16,6 +16,24 @@ stage () { echo; echo "================ $1 ================"; }
 stage "0/7 Environment"
 nvidia-smi | tee outputs/nvidia_smi.txt
 python -c "import sys, torch, transformers, trl, peft, bitsandbytes as bnb; print('python', sys.version.split()[0], '| torch', torch.__version__, '(CUDA', torch.version.cuda, ') | GPU', torch.cuda.get_device_name(0), 'sm', torch.cuda.get_device_capability(0), '| transformers', transformers.__version__, '| trl', trl.__version__, '| peft', peft.__version__, '| bitsandbytes', bnb.__version__)" | tee outputs/versions.txt
+# Every import the pipeline needs, so a missing package fails here, not mid-run
+python -c "from trl import DataCollatorForCompletionOnlyLM, SFTConfig, SFTTrainer; import peft, datasets, accelerate, pandas, matplotlib, tabulate, rouge_score; print('All pipeline imports OK')"
+# Gated-model access: fails in seconds with the real reason (licence not
+# accepted, token lacks gated-repo permission) instead of mid-pipeline
+python -c "
+import os
+from huggingface_hub import hf_hub_download
+from config import BASE_MODEL
+try:
+    hf_hub_download(BASE_MODEL, 'config.json', token=os.environ['HF_TOKEN'])
+    print('Hugging Face access to', BASE_MODEL, 'OK')
+except Exception as e:
+    print('HUGGING FACE ACCESS FAILED:', type(e).__name__, '-', str(e).strip().splitlines()[0][:300])
+    print('Check: (1) the licence is accepted at https://huggingface.co/' + BASE_MODEL + ' for the account that owns this token;')
+    print('       (2) a fine-grained token has the Read access to contents of all public gated repos you can access box ticked,')
+    print('           or use a classic Read token; (3) HF_TOKEN has no stray quotes/spaces.')
+    raise SystemExit(1)
+"
 # 4-bit smoke test: fails in seconds if bitsandbytes cannot run on this GPU,
 # instead of after the 16GB model download
 python -c "
