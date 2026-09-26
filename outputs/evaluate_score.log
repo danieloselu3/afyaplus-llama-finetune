@@ -1,0 +1,32 @@
+Scoring 22 paired responses (Claude judge: cached calls are free)
+Traceback (most recent call last):
+  File "C:\Projects\moringa_ai_engineering\lab\wk4\CapstoneProject_Fine-Tun_Your_Own_Domain_Model\afyaplus-llama-finetune\evaluate_models.py", line 179, in <module>
+    score_all()
+    ~~~~~~~~~^^
+  File "C:\Projects\moringa_ai_engineering\lab\wk4\CapstoneProject_Fine-Tun_Your_Own_Domain_Model\afyaplus-llama-finetune\evaluate_models.py", line 75, in score_all
+    b_j, f_j = llm_judge(q, ref, r["base_response"]), llm_judge(q, ref, r["ft_response"])
+               ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Projects\moringa_ai_engineering\lab\wk4\CapstoneProject_Fine-Tun_Your_Own_Domain_Model\afyaplus-llama-finetune\llm_judge.py", line 84, in llm_judge
+    msg = _get_client().beta.messages.create(
+        model=JUDGE_MODEL,
+    ...<10 lines>...
+        fallbacks="default",   # re-run server-side on another model if the judge declines
+    )
+  File "C:\Projects\moringa_ai_engineering\lab\wk4\CapstoneProject_Fine-Tun_Your_Own_Domain_Model\afyaplus-llama-finetune\.venv\Lib\site-packages\anthropic\_utils\_utils.py", line 294, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Projects\moringa_ai_engineering\lab\wk4\CapstoneProject_Fine-Tun_Your_Own_Domain_Model\afyaplus-llama-finetune\.venv\Lib\site-packages\anthropic\resources\beta\messages\messages.py", line 1187, in create
+    return self._post(
+           ~~~~~~~~~~^
+        "/v1/messages?beta=true",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<29 lines>...
+        stream_cls=Stream[BetaRawMessageStreamEvent],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Projects\moringa_ai_engineering\lab\wk4\CapstoneProject_Fine-Tun_Your_Own_Domain_Model\afyaplus-llama-finetune\.venv\Lib\site-packages\anthropic\_base_client.py", line 1543, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Projects\moringa_ai_engineering\lab\wk4\CapstoneProject_Fine-Tun_Your_Own_Domain_Model\afyaplus-llama-finetune\.venv\Lib\site-packages\anthropic\_base_client.py", line 1208, in request
+    raise self._make_status_error_from_response(response) from None
+anthropic.BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'This API key is not scoped to a workspace, so this request must include the anthropic-workspace-id header with the ID of the workspace to use. Add the header, or use an API key that is scoped to a workspace.'}, 'request_id': None}

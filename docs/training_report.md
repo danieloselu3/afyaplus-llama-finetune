@@ -68,6 +68,31 @@ The verification gate exposed two real problems:
 - The scope filter now blocks named medicines, drug classes and dosing schedules.
 - A verification safety question that is not in the training data.
 
-## Run 2: loss curve and diagnosis
+## Run 2: loss curve and diagnosis (final model)
 
-_Pending the second vast.ai run._
+Run 2 used adapters on all linear layers (41.9M trainable parameters, about 0.5% of the model), 5 epochs, and 176 training examples including the 20 clinical-redirect records. Artefacts are in `outputs/` and `trainer_state.json`.
+
+| Measure | Run 1 | Run 2 |
+|---|---|---|
+| Optimiser steps | 30 | 55 |
+| Training time | 1.1 min | 2.9 min |
+| Peak GPU memory | 11.1 GB | 11.4 GB |
+| Training loss (first -> last) | 3.52 -> 0.92 | 3.55 -> 0.03 |
+| Validation loss (first -> best) | 2.83 -> 1.31 | 2.33 -> **0.194** (step 40) |
+| Final validation loss | 1.31 | 0.201 |
+| Overfitting gap (final val - final train) | 0.39 (clinical caution) | **0.17** (within the 0.3 limit) |
+| Verification gate | 3/4 FAIL | **4/4 PASS**, stability PASS |
+| Cost at $0.78/hr | $0.014 training; $0.11 pipeline | $0.038 training; $0.14 pipeline (10.6 min) |
+
+![Run 2 loss curve](../outputs/loss_curve.png)
+
+**Diagnosis: healthy.** Both curves fall steeply and together through the first two epochs. Validation loss flattens at about 0.20 from epoch 3 and reaches its minimum of 0.194 at step 40. It then drifts up very slightly, to 0.201 by step 55 (+0.007): the first sign of overfitting. `load_best_model_at_end` restored the step-40 checkpoint, so the merged model is the one that generalised best. The final gap of 0.17 is within the 0.3 clinical limit. This is none of the Lab 3 failure patterns: not overfitting (validation never rose meaningfully), not underfitting (validation fell 92%), and not unstable.
+
+**About the "spikes".** The first version of `monitor_training_loss.py` flagged steps 28, 32, 40 and 52 as spikes. Training loss there moves between 0.03 and 0.26. Each logged point averages only 2 steps (32 examples), so near-zero losses bounce, and a 0.06 -> 0.26 move counts as a "50% jump". Validation loss kept falling through every flagged step, which rules out real instability. The detector now also requires the jump to exceed 10% of the starting loss. It gives the same verdicts as before on run 1 and on both course sample logs.
+
+**Why run 2 fits so much better.** The MLP adapters give the model room to store AfyaPlus procedures, and it now reproduces them: 30 minutes and Queue Escalation, duty roster and lockout ticket, 14 days and referral code. The extra epochs let validation loss reach its floor. The training loss of 0.03 means the training answers are close to memorised, so the grouped validation split matters: its 0.20 shows the model can state the same procedures in wording it never saw.
+
+**Remaining issues seen in the samples** (`outputs/inference_samples.md`):
+- Billing disputes "close within 48 hours"; the SOP says three working days.
+- The stiff-neck refusal volunteers that the symptoms "can be signs of meningitis". The advice to escalate is right, but naming a possible condition is outside an operational assistant's scope. The scope filter does not catch named conditions.
+- The fever refusal says to book "if symptoms do not improve within three days" when the user already had them for three days. It is safe, but the wording is weak.

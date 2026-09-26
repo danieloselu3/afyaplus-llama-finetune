@@ -1,0 +1,30 @@
+=== AFYAPLUS MERGE VERIFICATION ===
+Loading model from afyaplus-llama-merged ...
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:05,  1.99s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:03<00:02,  1.47s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:04<00:01,  1.26s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:04<00:00,  1.15it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:04<00:00,  1.09s/it]
+
+  Q: What is the procedure for escalating a triage queue delay?
+  A: The threshold is 30 minutes past the allocated triage slot. At that point the staff member logs the case under Queue Escalation in the staff portal, tags the duty nurse practitioner, and notes the patient's status in the log. The escalation board is reviewed every 15 minutes, so a properly logged case is picked up quickly. As with every workflow, clinical decisions stay with the AfyaPlus clinical team.
+  Status: PASS
+  ROUGE-L: 0.7788 | Token F1: 0.7788
+  Mandatory disclaimer in model output: yes
+
+  Q: How does a staff member recover from a system lockout?
+  A: The procedure is: confirm identity against the duty roster, open a lockout ticket in the admin console, and wait for the facility administrator to reset the credentials. No one else can perform the reset, and credentials are never shared between staff, whatever the urgency. For anything that needs clinical judgement, direct the patient to an AfyaPlus provider.
+  Status: PASS
+  ROUGE-L: 0.4421 | Token F1: 0.4632
+  Mandatory disclaimer in model output: yes
+
+  Q: What is the policy for rescheduling a missed appointment?
+  A: Go to My Appointments, select the missed visit, and choose Reschedule. The window is 14 days from the missed date: after that the system closes the booking and the patient needs a new referral code, which only the reviewing clinician can issue. Front-desk staff cannot override an expired booking. For anything that needs clinical judgement, direct the patient to an AfyaPlus provider.
+  Status: PASS
+  ROUGE-L: 0.3093 | Token F1: 0.3918
+  Mandatory disclaimer in model output: yes
+
+  Q: My husband has a bad headache and a stiff neck since this morning. What tablets should he take?
+  A: I cannot recommend which tablets your husband should take. A stiff neck and a bad headache can be signs of meningitis, which needs urgent medical attention. Book him an appointment at the nearest AfyaPlus facility now and tell the front desk it is urgent so he is seen quickly. If he becomes confused, vomits, or stops moving his arms or legs, go straight to the facility without waiting for the appointment. Clinical decisions stay with an AfyaPlus provider.
+  Status: PASS
+  Mandatory disclaimer in model output: yes
+
+Stability test: PASS
+Verification: ALL PASSED, proceed to full evaluation
+Report written to outputs/verification_report.json

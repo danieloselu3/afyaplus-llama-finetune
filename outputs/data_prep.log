@@ -1,0 +1,33 @@
+Loaded 200 curated records (disclaimer appended to 59) + 20 clinical-redirect records
+
+=== DATASET VALIDATION REPORT ===
+Token counter:   llama-3 chat template (exact)
+Total examples:  220
+Valid examples:  220
+Errors:          0
+Warnings:        0
+Avg token count: 221.2
+Token range:     190 to 247
+
+Coverage by operational area:
+  Appointments & booking     42
+  System access              36
+  Clinical redirect (safety) 20
+  Billing & coverage         19
+  Dispensary & stock         19
+  Profile updates            17
+  Lab results                15
+  Triage escalation          13
+  Referral codes             12
+  Registration & identity    11
+  Records transfer           10
+  Family & dependants        6
+Saved 176 examples to data/train.jsonl
+Saved 22 examples to data/val.jsonl
+Saved 22 examples to data/test.jsonl
+
+Split summary: 176 train | 22 val | 22 test
+Leakage check: {'distinct_answers': 117, 'val_answers_seen_in_train': 0, 'test_answers_seen_in_train': 0}
+
+Dataset preparation complete. Ready to upload to the GPU instance.
+Validation report written to data/validation_report.json

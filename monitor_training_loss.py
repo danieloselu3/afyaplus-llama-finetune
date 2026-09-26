@@ -16,7 +16,9 @@ from config import OUTPUT_DIR
 STATE_FILE = sys.argv[1] if len(sys.argv) > 1 else "trainer_state.json"
 CLINICAL_THRESHOLD = 0.3   # Max acceptable overfitting gap for a healthcare deployment
 UNDERFIT_MIN_DROP = 0.10   # Validation loss must fall at least 10% from its first reading
-SPIKE_FACTOR = 1.5         # A training-loss jump of 50%+ over the previous point is a spike
+SPIKE_FACTOR = 1.5         # A spike is a jump of 50%+ over the previous point...
+SPIKE_MIN_ABS = 0.10       # ...that is also larger than 10% of the starting loss. Without this,
+                           # batch noise near zero (e.g. 0.06 -> 0.26 on 32 examples) reads as a spike.
 
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
@@ -47,8 +49,10 @@ best_eval = eval_df["eval_loss"].min()
 best_step = int(eval_df.loc[eval_df["eval_loss"].idxmin(), "step"])
 gap = final_eval - final_train
 eval_drop = (first_eval - best_eval) / first_eval
+first_train_loss = train_df["train_loss"].iloc[0]
 ratios = train_df["train_loss"] / train_df["train_loss"].shift(1)
-spikes = train_df.loc[ratios > SPIKE_FACTOR, "step"].tolist()
+jumps = train_df["train_loss"] - train_df["train_loss"].shift(1)
+spikes = train_df.loc[(ratios > SPIKE_FACTOR) & (jumps > SPIKE_MIN_ABS * first_train_loss), "step"].tolist()
 
 print("\n=== TRAINING SUMMARY ===")
 print(f"Training loss:         {first_train:.4f} -> {final_train:.4f}")

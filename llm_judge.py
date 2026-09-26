@@ -49,7 +49,10 @@ _client = None
 def _get_client() -> anthropic.Anthropic:
     global _client
     if _client is None:
-        _client = anthropic.Anthropic(max_retries=5)
+        # Keys that are not scoped to a workspace must name one on every request.
+        workspace = os.getenv("ANTHROPIC_WORKSPACE_ID")
+        headers = {"anthropic-workspace-id": workspace} if workspace else None
+        _client = anthropic.Anthropic(max_retries=5, default_headers=headers)
     return _client
 
 

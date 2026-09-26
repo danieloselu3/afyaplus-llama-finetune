@@ -1,0 +1,13 @@
+{
+  "verdict": "healthy",
+  "first_train_loss": 3.5491,
+  "final_train_loss": 0.0324,
+  "first_eval_loss": 2.3315041065216064,
+  "final_eval_loss": 0.20059867203235626,
+  "best_eval_loss": 0.1936282515525818,
+  "best_step": 40,
+  "overfitting_gap": 0.1682,
+  "validation_improvement_pct": 91.7,
+  "spike_steps": [],
+  "clinical_threshold": 0.3
+}
